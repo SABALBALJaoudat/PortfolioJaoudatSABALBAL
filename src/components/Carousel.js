@@ -1,0 +1,79 @@
+import Image from 'next/image'
+import extra1 from '../image/Extra1.png'
+import extra2 from '../image/Extra2.png'
+import extra3 from '../image/Extra3.png'
+import { useState } from "react";
+import Swipe from "react-easy-swipe";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+// import { BsFillCircleFill } from "react-icons/bs";
+
+/**
+ * Carousel component for nextJS and Tailwind.
+ * Using external library react-easy-swipe for swipe gestures on mobile devices (optional)
+ *
+ * @param images - Array of images with src and alt attributes
+ * @returns React component
+ */
+export default function Carousel({}) {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const images = [extra1, extra2, extra3]
+    const handleNextSlide = () => {
+        let newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1;
+        setCurrentSlide(newSlide);
+    };
+
+    const handlePrevSlide = () => {
+        let newSlide = currentSlide === 0 ? images.length - 1 : currentSlide - 1;
+        setCurrentSlide(newSlide);
+    };
+
+    return (
+        <div className="relative h-90 bg-cyan-400 p-2">
+            <AiOutlineLeft
+                onClick={handlePrevSlide}
+                className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
+            />
+            <div className="w-full h-[90vh] flex overflow-hidden relative m-auto">
+                <Swipe
+                    onSwipeLeft={handleNextSlide}
+                    onSwipeRight={handlePrevSlide}
+                    className="relative z-10 w-52 h-full bg-red-700"
+                >
+                    {images.map((image, index) => {
+                        if (index === currentSlide) {
+                            return (
+                                <div className="h-full flex" key={image}>
+                                    {/*<img src={image} className="w-full object-contain" />*/}
+                                    <Image src={image} className="w-full object-contain m-auto" alt=""/>
+                                </div>
+                            );
+                        }
+                    })}
+                </Swipe>
+            </div>
+            <AiOutlineRight
+                onClick={handleNextSlide}
+                className="absolute right-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
+            />
+
+            <div className="relative flex justify-center ">
+                {images.map((_, index) => {
+                    return (
+                        <div
+                            className={
+                                index === currentSlide
+                                    ? "h-4 w-4 bg-gray-700 rounded-full mx-2 mb-2 cursor-pointer"
+                                    : "h-4 w-4 bg-gray-300 rounded-full mx-2 mb-2 cursor-pointer"
+                            }
+                            key={index}
+                            onClick={() => {
+                                setCurrentSlide(index);
+                            }}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
