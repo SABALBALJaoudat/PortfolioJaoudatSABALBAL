@@ -5,6 +5,7 @@ import Image from 'next/image';
 import photo from '../image/Photo de profil.png';
 // import extra1 from '../image/Extra1.png';
 import Carousel from '../components/Carousel.js';
+//Ici on est en test
 
 export default function Home() {
     return (
