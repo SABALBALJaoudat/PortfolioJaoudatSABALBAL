@@ -1,11 +1,12 @@
+import React from "react";
 import Head from 'next/head'
-// import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.css'
 import {BsFillCircleFill} from 'react-icons/bs';
 import Image from 'next/image';
 import photo from '../image/Photo de profil.png';
-// import extra1 from '../image/Extra1.png';
-import Carousel from '../components/Carousel.js';
-//Ici on est en test
+import Ogoxe from './Ogoxe';
+
+//Branche V0
 
 export default function Home() {
     return (
@@ -18,7 +19,9 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
             <main className={"bg-gray-200 px-10"} >
+
                 <section className={"min-h-screen"}>
                     <nav className="py-10 flex justify-between">
                         <h1 className={"text-2xl font-semibold font-poppins"}>
@@ -52,46 +55,7 @@ export default function Home() {
                     <div className={"flex"}>
                         <Image src={photo} className="mx-auto w-36 h-36" alt=""/>
                     </div>
-                    <section>
-                        <div className={"py-10"}>
-                            <h2 className={"text-2xl font-semibold"}>
-                                Ogoxe
-                            </h2>
-                            <p id="content">
-                                Travail de conception UX et UI sur un projet interne Smart Device<br/>
-                                Travail de conception UX et UI sur le projet Européen (Interreg France-Manche-Angleterre) nommé Building Resilience
-                                in Flood Disadvantaged Communities (BRIC)<br/>
-                                <br/>
-                                Application de la conception centrée utilisateur :<br/>
-                            </p>
-                            <ol className={"list-disc ml-5"}>
-                                <li>Analyse, compréhension et définition des clients (persona, userflow…)</li>
-                                <li>Maquettage et prototypage (basse-fidélité et haute-fidélité), choix du design / charte graphique (palette de couleurs,
-                                    typographie, composants…)</li>
-                                <li>Préparation et réalisation d atelier de co-conception (anglais / français), réalisation de tests utilisateurs
-                                    (Maze, tests en direct…), analyse des résultats</li>
-                                <li>Développement Front End (Vue.Js, HTML/JS/CSS)</li>
-                                <li>Réalisation du Design de StoryMap pour des partenaires</li>
-                            </ol>
-
-                            {/*<Carousel>*/}
-                            {/*    <div>*/}
-                            {/*        <Image src={photo} alt=""/>*/}
-                            {/*        <p className="legend">Image 1</p>*/}
-
-                            {/*    </div>*/}
-                            {/*    <div>*/}
-                            {/*        <Image src={photo} alt="" />*/}
-                            {/*        <p className="legend">Image 2</p>*/}
-
-                            {/*    </div>*/}
-                            {/*    <></>*/}
-                            {/*</Carousel>*/}
-                            <Carousel/>
-
-                        </div>
-                    </section>
-
+                    <Ogoxe/>
                 </section>
 
             </main>

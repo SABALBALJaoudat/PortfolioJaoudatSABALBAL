@@ -1,7 +1,4 @@
 import Image from 'next/image'
-import extra1 from '../image/Extra1.png'
-import extra2 from '../image/Extra2.png'
-import extra3 from '../image/Extra3.png'
 import { useState } from "react";
 import Swipe from "react-easy-swipe";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
@@ -14,10 +11,9 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
  * @param images - Array of images with src and alt attributes
  * @returns React component
  */
-export default function Carousel({}) {
+export default function Carousel({images}) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const images = [extra1, extra2, extra3]
     const handleNextSlide = () => {
         let newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1;
         setCurrentSlide(newSlide);
@@ -29,23 +25,24 @@ export default function Carousel({}) {
     };
 
     return (
-        <div className="relative h-90 bg-cyan-400 p-2">
+        <div className="relative h-auto p-2">
             <AiOutlineLeft
                 onClick={handlePrevSlide}
                 className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
             />
-            <div className="w-full h-[90vh] flex overflow-hidden relative m-auto">
+            {/*<div className="w-full h-[90vh] flex overflow-hidden relative m-auto bg-red-700">*/}
+            <div className="w-full h-[80vh] flex items-centered overflow-hidden bg-gray-300 rounded my-5">
                 <Swipe
                     onSwipeLeft={handleNextSlide}
                     onSwipeRight={handlePrevSlide}
-                    className="relative z-10 w-52 h-full bg-red-700"
+                    className="relative z-10 h-full"
                 >
                     {images.map((image, index) => {
                         if (index === currentSlide) {
                             return (
                                 <div className="h-full flex" key={image}>
                                     {/*<img src={image} className="w-full object-contain" />*/}
-                                    <Image src={image} className="w-full object-contain m-auto" alt=""/>
+                                    <Image src={image} className="h-full object-contain m-auto" alt=""/>
                                 </div>
                             );
                         }
