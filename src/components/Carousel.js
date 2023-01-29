@@ -31,18 +31,17 @@ export default function Carousel({images}) {
                 className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
             />
             {/*<div className="w-full h-[90vh] flex overflow-hidden relative m-auto bg-red-700">*/}
-            <div className="w-full h-[80vh] flex items-centered overflow-hidden bg-gray-300 rounded my-5">
+            <div className="w-full h-[80vh] flex overflow-hidden bg-gray-300 rounded my-5">
                 <Swipe
                     onSwipeLeft={handleNextSlide}
                     onSwipeRight={handlePrevSlide}
-                    className="relative z-10 h-full"
+                    className="mx-auto relative z-10 h-full"
                 >
                     {images.map((image, index) => {
                         if (index === currentSlide) {
                             return (
                                 <div className="h-full flex" key={image}>
-                                    {/*<img src={image} className="w-full object-contain" />*/}
-                                    <Image src={image} className="h-full object-contain m-auto" alt=""/>
+                                    <Image src={image} className="h-full object-contain" alt=""/>
                                 </div>
                             );
                         }

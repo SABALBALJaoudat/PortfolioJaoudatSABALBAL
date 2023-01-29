@@ -1,15 +1,15 @@
 import React from 'react';
 
 // import styles from '@/styles/Home.module.css'
-import Image from 'next/image';
 import Carousel from '../components/Carousel.js';
 
-import extra1 from '../image/Extra1.png'
-import extra2 from '../image/Extra2.png'
-import extra3 from '../image/Extra3.png'
+import ogoxe1 from '../image/Ogoxe1.png'
+import ogoxe2 from '../image/Ogoxe2.png'
+import ogoxe3 from '../image/Ogoxe3.png'
+import ogoxe4 from '../image/Ogoxe4.png'
 
 
-const images = [extra1, extra2, extra3];
+const images = [ogoxe1, ogoxe2, ogoxe3, ogoxe4];
 
 function Ogoxe() {
     return (
@@ -18,7 +18,7 @@ function Ogoxe() {
                 <h2 className={"text-2xl font-semibold"}>
                     Ogoxe
                 </h2>
-                <p id="content">
+                <p>
                     Travail de conception UX et UI sur un projet interne Smart Device<br/>
                     Travail de conception UX et UI sur le projet Européen (Interreg France-Manche-Angleterre) nommé Building Resilience
                     in Flood Disadvantaged Communities (BRIC)<br/>
