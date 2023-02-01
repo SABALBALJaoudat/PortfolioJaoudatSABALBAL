@@ -7,25 +7,27 @@ import ogoxe1 from '../image/Ogoxe1.png'
 import ogoxe2 from '../image/Ogoxe2.png'
 import ogoxe3 from '../image/Ogoxe3.png'
 import ogoxe4 from '../image/Ogoxe4.png'
+import TopPage from "@/components/TopPage";
 
 
 const images = [ogoxe1, ogoxe2, ogoxe3, ogoxe4];
 
 function Ogoxe() {
     return (
-        <section>
-            <div className={"py-10"}>
-                <h2 className={"text-2xl font-semibold"}>
+        <section className={"bg-gray-100 min-h-screen"}>
+            <TopPage/>
+            <div className={"p-4"}>
+                <h2 className={"text-2xl font-semibold py-10"}>
                     Ogoxe
                 </h2>
-                <p>
+                <p className={"text-justify"}>
                     Travail de conception UX et UI sur un projet interne Smart Device<br/>
                     Travail de conception UX et UI sur le projet Européen (Interreg France-Manche-Angleterre) nommé Building Resilience
                     in Flood Disadvantaged Communities (BRIC)<br/>
                     <br/>
                     Application de la conception centrée utilisateur :<br/>
                 </p>
-                <ol className={"list-disc ml-5"}>
+                <ol className={"list-disc ml-5 text-justify"}>
                     <li>Analyse, compréhension et définition des clients (persona, userflow…)</li>
                     <li>Maquettage et prototypage (basse-fidélité et haute-fidélité), choix du design / charte graphique (palette de couleurs,
                         typographie, composants…)</li>

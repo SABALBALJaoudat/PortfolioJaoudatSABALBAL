@@ -25,13 +25,13 @@ export default function Carousel({images}) {
     };
 
     return (
-        <div className="relative h-auto p-2">
+        <div className="relative h-auto py-10">
             <AiOutlineLeft
                 onClick={handlePrevSlide}
                 className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
             />
             {/*<div className="w-full h-[90vh] flex overflow-hidden relative m-auto bg-red-700">*/}
-            <div className="w-full h-[80vh] flex overflow-hidden bg-gray-300 rounded my-5">
+            <div className="w-full h-[80vh] flex overflow-hidden bg-gray-300 rounded-lg my-5">
                 <Swipe
                     onSwipeLeft={handleNextSlide}
                     onSwipeRight={handlePrevSlide}

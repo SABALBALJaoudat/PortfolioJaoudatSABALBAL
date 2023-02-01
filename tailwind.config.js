@@ -7,15 +7,13 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/components/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
         poppins: "poppins"
       },
-      backgroundImage: {
-        Extra: './image/Extra1.png'
-      }
     },
   },
   plugins: [],
