@@ -6,17 +6,16 @@ import extra1 from '../image/Extra1.png';
 import extra2 from '../image/Extra2.png';
 import extra3 from '../image/Extra3.png';
 import extra4 from '../image/Extra4.png';
-import TopPage from "@/components/TopPage";
 
 
 const images = [extra1, extra2, extra3, extra4];
 
 function Extra() {
     return (
-        <section className={"bg-gray-100 min-h-screen"}>
-            <TopPage/>
-            <div className={"p-4"}>
-                <h2 className={"text-2xl font-semibold py-10"}>
+        <div className="flex items-center justify-center">
+        <div className={"max-w-5xl"}>
+            <div className={"p-5"}>
+                <h2 className={"text-2xl font-semibold mb-8"}>
                     Extra
                 </h2>
                 <p className={"text-justify"}>
@@ -35,7 +34,8 @@ function Extra() {
             </div>
 
             <Carousel images={images}/>
-        </section>
+        </div>
+        </div>
     );
 };
 
