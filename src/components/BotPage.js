@@ -38,8 +38,11 @@ function BotPage() {
             <div className="flex flex-wrap items-center
                 py-2">
                 <p>
-                    Ou bien encore pour voir mon CV :
+                    Ou bien encore pour télécharger mon CV :
                 </p>
+                <a className="ml-2" href='../documents/Cv Jaoudat SABALBAL Designer Ux Ui Dev Front.pdf' download>
+                    Download pdf
+                </a>
             </div>
         </div>
     );
