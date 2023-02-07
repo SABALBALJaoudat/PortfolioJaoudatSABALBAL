@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from "next/image";
-import cards1 from "../image/Ogoxe1.png";
-import cards2 from "../image/Extra1.png";
-import cards3 from "../image/Extra2.png";
-import cards4 from "../image/Extra3.png";
+import cards1 from "../image/Ogoxe Logo 1.png";
+import cards2 from "../image/Extra-Logo.png";
+import cards3 from "../image/Irit Logo.png";
 import Link from "next/link";
 
 const images = [
     [cards1, "Ogoxe", "/OgoxePage"],
     [cards2, "Extra", "/ExtraPage"],
+    [cards3, "HMKL", "/HmklPage"],
 ]
 
 function Cards() {
