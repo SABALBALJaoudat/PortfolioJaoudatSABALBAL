@@ -4,7 +4,7 @@ import BotPage from "@/components/BotPage";
 import Ogoxe from "@/pages/Ogoxe";
 import Hmkl from "@/pages/Hmkl";
 
-function OgoxePage() {
+function HmklPage() {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <TopPage/>
@@ -14,4 +14,4 @@ function OgoxePage() {
     );
 }
 
-export default OgoxePage;
+export default HmklPage;
