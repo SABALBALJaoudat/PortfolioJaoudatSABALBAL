@@ -12,7 +12,7 @@ const images = [ogoxe1, ogoxe2, ogoxe3, ogoxe4];
 
 function Ogoxe() {
     return (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mt-24">
             <div className={"max-w-5xl"}>
                 <div className={"p-5"}>
                     <h2 className={"text-2xl font-semibold mb-8"}>

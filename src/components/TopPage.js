@@ -1,5 +1,6 @@
 import React from 'react';
 import {BsFillMoonFill, BsSunFill} from "react-icons/bs";
+import {HiMenu} from "react-icons/hi";
 import Link from "next/link";
 import {useTheme} from "next-themes";
 
@@ -28,34 +29,44 @@ function TopPage() {
         }
     };
 
+    function handleClick() {
+        if (document.getElementById("SideMenu").style.width == "50%"){
+            // document.getElementById("Logo").style.visibility = "hidden";
+            document.getElementById("Navbar").style.visibility = "hidden";
+            document.getElementById("SideMenu").style.width="0%";
+        }
+        else{
+            // document.getElementById("Logo").style.visibility = "visible";
+            document.getElementById("Navbar").style.visibility = "visible";
+            document.getElementById("SideMenu").style.width="50%";
+        }
+    }
+
     return (
-        <div className="w-full sticky top-0 z-30 bg-gray-100 dark:bg-zinc-800 bg-opacity-90 dark:opacity-90 mb-10">
+        // <div className="w-full sticky top-0 z-30 bg-gray-100 dark:bg-zinc-800 bg-opacity-90 dark:opacity-90 mb-10">
+        <div className="w-full h-20 lg:h-0 fixed top-0 z-30 bg-gray-100 dark:bg-zinc-800 dark:opacity-90">
             <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
 
-            {/*<nav className="py-10 flex justify-between">*/}
-            <nav className="flex justify-between
-            py-1 px-5">
-                <h1 className="flex items-center text-2xl font-semibold font-poppins">
-                    <Link href="/">Jaoudat Portfolio</Link>
-                </h1>
-                <ul className="flex items-center">
-                    <li>
-                        <div className="container  px-4 sm:px-6 py-4 flex justify-between items-center">
+            <HiMenu className="fixed top-5 right-5 h-10 w-10 z-30" role="button" onClick={handleClick}/>
+
+            <h1 className="fixed top-5 left-5 text-2xl font-semibold font-poppins">
+                <Link href="/">Jaoudat Portfolio</Link>
+            </h1>
+
+            <div id="SideMenu" className="fixed h-full w-0 top-0 right-0 z-20 bg-red-200 rounded-l-xl" style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}>
+                <div className="h-full flex justify-center items-center">
+                    <nav id="Navbar" className="py-1 px-5 invisible">
+                        <div className="container px-4 sm:px-6 py-4 flex justify-between items-center">
 
                             {renderThemeChanger()}
 
                         </div>
-                    </li>
-                    {/*<li><Link className="bg-gradient-to-r from-amber-800 to-amber-700*/}
-                    {/*text-amber-50*/}
-                    {/*px-3 py-2 mx-2*/}
-                    {/*rounded-md" href="/">*/}
-                    {/*    Resume*/}
-                    {/*</Link></li>*/}
-                    {/*<li><Link className={"bg-gradient-to-r from-amber-800 to-amber-700 text-amber-50 px-3 py-2 " +*/}
-                    {/*    "rounded-md mx-2"} href="/Contact">Contact</Link></li>*/}
-                </ul>
-            </nav>
+                        <h1 className="text-2xl font-semibold font-poppins">
+                            <Link href="/">Ogoxe</Link>
+                        </h1>
+                    </nav>
+                </div>
+            </div>
         </div>
     );
 }

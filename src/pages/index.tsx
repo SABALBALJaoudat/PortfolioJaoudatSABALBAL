@@ -3,6 +3,7 @@ import Head from 'next/head'
 import HomePage from './Home';
 import TopPage from "@/components/TopPage";
 import BotPage from "@/components/BotPage";
+import TitleAnimation from "@/components/TitleAnimation";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
 
             <div className="min-h-screen flex flex-col justify-between dark:bg-zinc-900">
                 <TopPage/>
+                <TitleAnimation/>
                 <HomePage/>
                 <BotPage/>
             </div>
