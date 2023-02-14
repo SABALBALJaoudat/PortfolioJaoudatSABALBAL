@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import photo from "@/image/Photo de profil.png";
+import workIllustration from "@/image/StorySet Work.svg";
 import Cards from "@/components/Cards";
 import Link from "next/link";
 
@@ -9,8 +10,8 @@ function Home() {
         <div className="flex items-center justify-center">
             <div className="max-w-5xl">
                 <div className={"p-5"}>
-                    <div className={"w-full h-screen flex flex-col items-center justify-around"}>
-                        <div className={"text-center"}>
+                    <div className={"flex flex-col"}>
+                        <div className={"text-center mt-28"}>
                             <h2 className={"text-5xl text-amber-800 font-medium"}>
                                 Jaoudat SABALBAL
                             </h2>
@@ -18,7 +19,7 @@ function Home() {
                                 Ux Ui Designer // Front End Developer
                             </h3>
                         </div>
-                        <div className={"basis-1/2 flex flex-wrap"}>
+                        <div className={"flex flex-wrap mt-24"}>
                             <p className={"sm:w-4/6 text-justify text-base leading-7"}>
                                 Hi, my name is Jaoudat, a passionate and motivated UX/UI designer and Front-End developer.
                                 I am specialized in creating attractive and intuitive designs for websites and
@@ -26,24 +27,37 @@ function Home() {
                                 and I love working in a team to implement designs that deliver an exceptional experience
                                 for users.<br/>
                                 <br/>
-                                Vous pouvez trouver ici mon portfolio complet :
+                                You can find my complete portfolio here :
                                 <Link target="_blank" className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}
                                       href={"https://www.figma.com/proto/lizKbzPM4zMi4izsgn4nKL/Portfolio?page-id=701%3A193&node-id=715%3A341&viewport=569%2C939%2C0.28&scaling=scale-down&starting-point-node-id=715%3A341"}>
                                     portfolio Figma
                                 </Link>
                             </p>
-                            <div className={"flex justify-center mx-auto mt-4"}>
+                            <div className={"flex justify-center mx-auto mt-14 md:mt-4"}>
                                 <Image src={photo}
                                        className="w-44 h-44 md:w-52 md:h-52" alt=""/>
                             </div>
                         </div>
                     </div>
 
-                    <h2 className={"text-3xl font-semibold py-5 mb-12"}>
-                        Project
-                    </h2>
 
-                    <Cards/>
+                    <div className="grid grid-rows-1 grid-cols-2 md:grid-cols-3 gap-4 py-5 mt-24">
+                        <h2 className={"row-start-1 col-start-1 text-3xl font-semibold"}>
+                            Project
+                        </h2>
+                        <div className={"row-start-1 col-start-2 md:col-start-3 w-full h-auto"}>
+                            {/*<a href="https://storyset.com/user" className={"text-center text-xs mx-auto"}>User illustrations by Storyset</a>*/}
+                            <Image src={workIllustration}
+                                   className="" alt="User illustrations by Storyset"/>
+                            <div className={"flex items-center justify-center"}>
+                                <a href="https://storyset.com/user" className={"text-xs"}>User illustrations by Storyset</a>
+                            </div>
+                        </div>
+                        <div className={"row-start-1 col-start-1 md:col-end-3 relative mt-20"}>
+                            <Cards/>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

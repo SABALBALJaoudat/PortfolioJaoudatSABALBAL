@@ -1,3 +1,4 @@
+import Link from 'next/link.js';
 import React from 'react';
 
 import Carousel from '../components/Carousel.js';
@@ -17,16 +18,20 @@ function Extra() {
                     <h2 className={"text-2xl font-semibold mb-8"}>
                         HMKL
                     </h2>
-                    <a className=" text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php">
+                    <Link target="_blank" passHref={true}
+                          className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                          href="https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php">
                         https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php
-                    </a>
+                    </Link>
                     <p className={"text-justify"}>
-                        Via la mise en œuvre d une méthode centrée utilisateur :<br/>
+                        The aim of this internship was to create a website with exercises for the learning of mathematics in primary schools
+                        and add integration of various interaction techniques to include students with disabilities<br/>
                         <br/>
-                        - Développement d un site Web (HTML/CSS, Javascript) pour l apprentissage des mathématiques au primaire
-                        et intégration de divers techniques d interactions pour inclure des élèves en difficultés de handicap<br/>
-                        - Réalisation de maquettes via Figma<br/>
-                        - Récupération et analyse des besoins utilisateurs<br/>
+                        Via the implementation of a user-centred method :<br/>
+                        <br/>
+                        - Development of a website (HTML/CSS, Javascript) <br/>
+                        - Creation of mock-up and prototyping (low-fidelity and high-fidelity) via Figma<br/>
+                        - Recovery and analysis of user needs<br/>
                     </p>
                 </div>
 

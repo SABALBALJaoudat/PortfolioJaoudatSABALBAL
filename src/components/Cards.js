@@ -13,7 +13,7 @@ const images = [
 
 function Cards() {
     return (
-        <div className="flex flex-wrap items-center min-w-screen">
+        <div className="flex flex-wrap items-center">
             {images.map((image, index) => {
                 return (
                     <div className="" key={image[0]}>

@@ -5,23 +5,22 @@ import {BsChevronDoubleDown} from "react-icons/bs";
 import {useTheme} from "next-themes";
 
 
-function TitleAnimation() {
 
+let firstReload = 0;
+
+function TitleAnimation() {
     const tl = gsap.timeline({
         id: 'Timeline',
         repeat: 0
     });
-// GSDevTools.create({
-//     animation: tl
-// });
 
-    let colors = ['#F2F2F2', '#5CB8E4', '#fca5a5'];
+    let colors = ['#F8E3EA', '#5CB8E4', '#fca5a5'];
 
     const {systemTheme , theme} = useTheme ();
 
     const currentTheme = theme === "system" ? systemTheme : theme ;
     if(currentTheme ==="dark"){
-        colors = ['#fca5a5', '#5CB8E4', '#F2F2F2'];
+        colors = ['#fca5a5', '#5CB8E4', '#F8E3EA'];
     }
 
     function tween (node) {
@@ -35,28 +34,36 @@ function TitleAnimation() {
             }
             path.setAttribute('stroke', color);
             tl.set(path, {
-                strokeDasharray: length + 0.5,
-                strokeDashoffset: length + 0.6,
+                strokeDasharray: length + 0.8,
+                strokeDashoffset: length + 0.7,
                 autoRound: false
             }, 0);
             tl.to(path, {
                 strokeDashoffset: 0,
                 autoRound: false,
-                duration: 1.2,
+                duration: 2,
                 ease: 'power3.out'
             }, index * 0.25 + delay);
         });
     }
 
-
     useEffect(() => {
-        document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
-    }, [])
+        if (firstReload < 2){
+            document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
+            firstReload++;
+        }else{
+            if (currentTheme ==="dark"){
+                document.querySelectorAll('.motion path, .motion line').forEach(p => p.setAttribute('stroke', '#F8E3EA'));
+            }else{
+                document.querySelectorAll('.motion path, .motion line').forEach(p => p.setAttribute('stroke', '#fca5a5'));
+            }
+        }
+    }, [currentTheme])
 
     return (
         <div className="flex flex-col items-center h-screen w-full">
             <svg className="motion" viewBox="-3 0 424 158" height="auto" width="60%">
-                <g id="Calque_1-2">
+                <g>
                     <path
                         d="M38.7 8v45.1c0 6.7-1.6 12-4.9 16C30.5 73 25.7 75 19.3 75c-4.4 0-8-.9-10.9-2.6-2.9-1.8-4.9-4.3-6.2-7.4C1 61.9.7 58.2 1.3 54"
                         id={styles.st0}/>
@@ -103,7 +110,7 @@ function TitleAnimation() {
                         id={styles.st0}/>
                 </g>
             </svg>
-            <BsChevronDoubleDown className="w-10 h-10"/>
+            <BsChevronDoubleDown className="w-8 h-8"/>
         </div>
     );
 }

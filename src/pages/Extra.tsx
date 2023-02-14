@@ -19,17 +19,16 @@ function Extra() {
                         Extra
                     </h2>
                     <p className={"text-justify"}>
-                        Projet Chef d œuvre de Design Ux/Ui pour l application Karacal dans une équipe de 4 étudiants,
-                        afin de créer de nouvelles interfaces devant être ajouté en tant que couche à la nouvelle application
-                        Extra<br/>
+                        Ux/Ui Design Lead project for the Karacal (which has now changed to Extra) application in a team of 4 students,
+                        to create new interfaces to be added as a layer to the new application Extra<br/>
                         <br/>
-                        Application de la conception centrée utilisateur :<br/>
+                        Application of user-centred design :<br/>
                     </p>
                     <ol className={"list-disc ml-5 text-justify"}>
-                        <li>Création d une grille d entretien et réalisation d interview</li>
-                        <li>Réalisation de Cycle itératif centré sur les utilisateurs</li>
-                        <li>Réalisation de maquettes via Figma</li>
-                        <li>Réalisation de prototypes papier (storyboard, sketch, prototype video)</li>
+                        <li>Creating interviews grid and conducting interviews</li>
+                        <li>Realisation of a user-centred iterative cycle</li>
+                        <li>Production of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
+                        <li>Production of paper prototypes (storyboard, sketch, video prototype)</li>
                     </ol>
                 </div>
 
