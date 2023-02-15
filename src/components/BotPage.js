@@ -42,11 +42,8 @@ function BotPage() {
                     <p>
                         Or to download my CV :
                     </p>
-                    {/*<a className="ml-2" href='../../public/documents/Cv Jaoudat SABALBAL Designer Ux Ui Dev Front.pdf' download>*/}
-                    {/*    <BsDownload className="mx-4 h-6 w-6"/>*/}
-                    {/*</a>*/}
                     <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf' target="_blank" rel="noopener noreferrer">
-                        <BsDownload className="mx-4 h-6 w-6 mx-4"/>
+                        <BsDownload className="mx-4 h-6 w-6"/>
                     </a>
                 </div>
             </div>
