@@ -13,7 +13,7 @@ function Home() {
                 <div className={"p-5"}>
                     <div className={"flex flex-col"}>
                         <div className={"text-center mt-28"}>
-                            <h2 className={"text-5xl text-amber-800 font-medium"}>
+                            <h2 className={"text-5xl font-medium"}>
                                 Jaoudat SABALBAL
                             </h2>
                             <h3 className={"text-2xl font-medium py-4"}>
