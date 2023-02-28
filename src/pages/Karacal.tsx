@@ -10,16 +10,16 @@ import extra4 from '../image/Extra4.png';
 
 const images = [extra1, extra2, extra3, extra4];
 
-function Extra() {
+function Karacal() {
     return (
         <div className="flex items-center justify-center mt-24">
             <div className={"max-w-5xl"}>
                 <div className={"p-5"}>
                     <h2 className={"text-2xl font-semibold mb-8"}>
-                        Extra
+                        Karacal / Extra
                     </h2>
                     <p className={"text-justify"}>
-                        Ux/Ui Design Lead project for the Karacal (which has now changed to Extra) application in a team of 4 students,
+                        Ux/Ui Design Lead project for Karacal (which will become Extra) in a team of 4 students,
                         to create new interfaces to be added as a layer to the new application Extra<br/>
                         <br/>
                         Application of user-centred design :<br/>
@@ -38,4 +38,4 @@ function Extra() {
     );
 };
 
-export default Extra;
+export default Karacal;

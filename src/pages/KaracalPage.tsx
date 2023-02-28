@@ -1,16 +1,16 @@
 import React from 'react';
 import TopPage from "@/components/TopPage";
 import BotPage from "@/components/BotPage";
-import Extra from "@/pages/Extra";
+import Karacal from "@/pages/Karacal";
 
-function ExtraPage() {
+function KaracalPage() {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <TopPage/>
-            <Extra/>
+            <Karacal/>
             <BotPage/>
         </div>
     );
 }
 
-export default ExtraPage;
+export default KaracalPage;

@@ -10,7 +10,7 @@ import hmkl3 from '../image/HMKL3.png';
 
 const images = [hmkl1, hmkl2, hmkl3];
 
-function Extra() {
+function Hmkl() {
     return (
         <div className="flex items-center justify-center mt-24">
             <div className={"max-w-5xl"}>
@@ -23,15 +23,17 @@ function Extra() {
                           href="https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php">
                         https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php
                     </Link>
-                    <p className={"text-justify"}>
+                    <p className={"text-justify mt-5"}>
                         The aim of this internship was to create a website with exercises for the learning of mathematics in primary schools
                         and add integration of various interaction techniques to include students with disabilities<br/>
                         <br/>
                         Via the implementation of a user-centred method :<br/>
                         <br/>
-                        - Development of a website (HTML/CSS, Javascript) <br/>
-                        - Creation of mock-up and prototyping (low-fidelity and high-fidelity) via Figma<br/>
-                        - Recovery and analysis of user needs<br/>
+                        <ol className={"list-disc ml-5 text-justify"}>
+                            <li>Development of a website (HTML/CSS, Javascript)</li>
+                            <li>Creation of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
+                            <li>Recovery and analysis of user needs</li>
+                        </ol>
                     </p>
                 </div>
 
@@ -41,4 +43,4 @@ function Extra() {
     );
 };
 
-export default Extra;
+export default Hmkl;

@@ -7,13 +7,13 @@ import Link from "next/link";
 
 const images = [
     [cards1, "Ogoxe", "/OgoxePage"],
-    [cards2, "Extra", "/ExtraPage"],
+    [cards2, "Karacal", "/KaracalPage"],
     [cards3, "HMKL", "/HmklPage"],
 ]
 
 function Cards() {
     return (
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center justify-center ">
             {images.map((image, index) => {
                 return (
                     <div className="" key={image[0]}>

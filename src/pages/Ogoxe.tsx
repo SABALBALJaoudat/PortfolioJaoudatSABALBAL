@@ -24,7 +24,7 @@ function Ogoxe() {
                           href="https://www.channelmanche.com/fr/projets/projets/building-resilience-in-flood-disadvantaged-communities/">
                         https://www.channelmanche.com/fr/projets/projets/building-resilience-in-flood-disadvantaged-communities/
                     </Link>
-                    <p className={"text-justify"}>
+                    <p className={"text-justify mt-5"}>
                         UX and UI design work on an internal Smart Device project<br/>
                         UX and UI design work on the European project (Interreg France-Channel-England) called Building Resilience
                         in Flood Disadvantaged Communities (BRIC)<br/>

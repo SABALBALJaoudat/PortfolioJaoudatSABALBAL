@@ -47,11 +47,11 @@ function Home() {
                     </div>
 
 
-                    <div className="grid grid-rows-1 grid-cols-2 md:grid-cols-3 gap-4 py-5 mt-24">
+                    <div className="lg:grid lg:grid-cols-3 lg:gap-4 py-5 mt-24">
                         <h2 className={"row-start-1 col-start-1 text-3xl font-semibold"}>
                             Project
                         </h2>
-                        <div className={"row-start-1 col-start-2 md:col-start-3 w-full h-auto"}>
+                        <div className={"hidden lg:block lg:row-start-1 lg:col-start-3 w-full h-auto"}>
                             {/*<a href="https://storyset.com/user" className={"text-center text-xs mx-auto"}>User illustrations by Storyset</a>*/}
                             <Image src={workIllustration}
                                    className="" alt="User illustrations by Storyset"/>
@@ -59,7 +59,7 @@ function Home() {
                                 <a href="https://storyset.com/user" className={"text-xs"}>User illustrations by Storyset</a>
                             </div>
                         </div>
-                        <div className={"row-start-1 col-start-1 md:col-end-3 relative mt-20"}>
+                        <div className={"lg:row-start-1 lg:col-start-1 lg:col-end-3 relative mt-20"}>
                             <Cards/>
                         </div>
                     </div>

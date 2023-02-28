@@ -1,7 +1,6 @@
 import React from 'react';
 import TopPage from "@/components/TopPage";
 import BotPage from "@/components/BotPage";
-import Ogoxe from "@/pages/Ogoxe";
 import Hmkl from "@/pages/Hmkl";
 
 function HmklPage() {

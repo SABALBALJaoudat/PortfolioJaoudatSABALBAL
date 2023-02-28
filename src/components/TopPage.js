@@ -80,7 +80,7 @@ function TopPage() {
                             <p className="text-2xl my-2" role={"button"} onClick={returnHome}>Home</p>
                             <Image src={require("../image/SeparationLine.svg")} className="h-8 w-80"></Image>
                             <Link href="OgoxePage" className="my-2">Ogoxe</Link>
-                            <Link href="ExtraPage" className="my-2">Extra</Link>
+                            <Link href="KaracalPage" className="my-2">Karacal</Link>
                             <Link href="HmklPage" className="my-2">HMKL</Link>
                         </h1>
                     </nav>
