@@ -16,6 +16,14 @@ module.exports = {
       fontFamily: {
         poppins: "poppins"
       },
+      colors: {
+        primary: "#0a0a0a",
+      },
+      backgroundImage : {
+        site: "url('/bg_site.jpg')",
+        site_dark: "url('/bg_site_dark.jpg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],
