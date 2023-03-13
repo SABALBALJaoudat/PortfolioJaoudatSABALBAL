@@ -110,7 +110,7 @@ function Home() {
                         </div>
 
                         <div className="flex flex-col py-5 my-14">
-                            <h2 id={"project"} className={"text-3xl font-semibold mb-10"}>
+                            <h2 id={"contact"} className={"text-3xl font-semibold mb-10"}>
                                 Contact
                             </h2>
                             <div className={"flex flex-wrap items-center py-2"}>
