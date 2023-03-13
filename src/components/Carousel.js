@@ -30,7 +30,6 @@ export default function Carousel({images}) {
                 onClick={handlePrevSlide}
                 className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-500 z-20"
             />
-            {/*<div className="w-full h-[90vh] flex overflow-hidden relative m-auto bg-red-700">*/}
             <div className="w-full h-[60vh] flex overflow-hidden bg-gray-300 rounded-lg my-5">
                 <Swipe
                     onSwipeLeft={handleNextSlide}
