@@ -38,12 +38,10 @@ function TopPage() {
 
     function handleClick() {
         if (document.getElementById("SideMenu").style.width == "40%"){
-            // document.getElementById("Logo").style.visibility = "hidden";
             document.getElementById("Navbar").style.visibility = "hidden";
             document.getElementById("SideMenu").style.width="0%";
         }
         else{
-            // document.getElementById("Logo").style.visibility = "visible";
             document.getElementById("Navbar").style.visibility = "visible";
             document.getElementById("SideMenu").style.width="40%";
         }
@@ -57,8 +55,7 @@ function TopPage() {
     }
 
     return (
-        // <div className="w-full sticky top-0 z-30 bg-gray-100 dark:bg-zinc-800 bg-opacity-90 dark:opacity-90 mb-10">
-        <div className="w-full h-20 lg:h-0 fixed top-0 z-30 bg-gray-100 dark:bg-zinc-800">
+        <div className="w-full h-20 lg:h-0 bg-site dark:bg-site_dark fixed top-0 z-30">
             <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
 
             <HiMenu className="fixed top-5 right-5 h-10 w-10 z-30" role="button" onClick={handleClick}/>
@@ -78,10 +75,11 @@ function TopPage() {
                         </div>
                         <h1 className="text-xl font-semibold font-poppins flex flex-col items-center">
                             <p className="text-2xl my-2" role={"button"} onClick={returnHome}>Home</p>
-                            <Image src={require("../image/SeparationLine.svg")} className="h-8 w-80"></Image>
+                            <Image src={require("../image/SeparationLine.svg")} className="h-8 w-80" alt={""}></Image>
                             <Link href="OgoxePage" className="my-2">Ogoxe</Link>
                             <Link href="KaracalPage" className="my-2">Karacal</Link>
                             <Link href="HmklPage" className="my-2">HMKL</Link>
+                            {/*<a href="#project" className="my-2">Project</a>*/}
                         </h1>
                     </nav>
                 </div>
