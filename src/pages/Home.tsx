@@ -51,7 +51,7 @@ function Home() {
                                             <BsDownload className="h-5 w-5"/>
                                         </IconButton>
                                     </a>
-                                    <a href="#project">
+                                    <a href="#contact">
                                         <IconButton text={"Contact"} color={"bg-gradient-to-tr from-red-300 to-sky-400"}>
                                             <IoMdContact className="h-5 w-5"/>
                                         </IconButton>
@@ -110,7 +110,7 @@ function Home() {
                         </div>
 
                         <div className="flex flex-col py-5 my-14">
-                            <h2 className={"text-3xl font-semibold mb-10"}>
+                            <h2 id={"project"} className={"text-3xl font-semibold mb-10"}>
                                 Contact
                             </h2>
                             <div className={"flex flex-wrap items-center py-2"}>
