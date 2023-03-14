@@ -4,6 +4,7 @@ import photo from "@/image/Photo de profil.png";
 import workIllustration from "@/image/StorySet Work.svg";
 import Cards from "@/components/Cards";
 import Link from "next/link";
+import {animateScroll as scroll} from 'react-scroll';
 import IconButton from "@/components/IconButton";
 import {BsChevronDoubleDown, BsDownload, BsLinkedin} from "react-icons/bs";
 import TitleAnimation from "@/components/TitleAnimation";
@@ -11,6 +12,18 @@ import {TypeAnimation} from "react-type-animation";
 import {IoMdContact} from "react-icons/io";
 
 function Home() {
+
+    const scrollToContact = () => {
+        const contactElement = document.getElementById('contact');
+        if (contactElement) {
+            scroll.scrollTo(contactElement.offsetTop, {
+                duration: 50,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            });
+        }
+    };
+
     return (
         <div>
             <div className="flex items-center justify-center">
@@ -51,10 +64,10 @@ function Home() {
                                             <BsDownload className="h-5 w-5"/>
                                         </IconButton>
                                     </a>
-                                    <a href="#contact">
-                                        <IconButton text={"Contact"} color={"bg-gradient-to-tr from-red-300 to-sky-400"}>
-                                            <IoMdContact className="h-5 w-5"/>
-                                        </IconButton>
+                                    <a href="#" onClick={scrollToContact}>
+                                            <IconButton text={"Contact"} color={"bg-gradient-to-tr from-red-300 to-sky-400"}>
+                                                <IoMdContact className="h-5 w-5"/>
+                                            </IconButton>
                                     </a>
                                 </div>
                                 <BsChevronDoubleDown className="chevronDoubleDown absolute bottom-5 w-8 h-8"/>
@@ -72,9 +85,9 @@ function Home() {
                                     You can have a look to my CV with all my projects :
                                     <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf'
                                        target="_blank" rel="noopener noreferrer">
-                                        <IconButton text={"Cv"} color={"bg-gradient-to-tr from-red-700 to-yellow-500"}>
-                                            <BsDownload className="h-5 w-5"/>
-                                        </IconButton>
+                                        <button className={"flex flex-row p-2 m-2 items-center rounded-xl text-white bg-gradient-to-tr from-red-700 to-yellow-500"}>
+                                            CV
+                                        </button>
                                     </a>
                                 </p>
                                 <p className={"text-justify text-base leading-7 mt-5"}>
