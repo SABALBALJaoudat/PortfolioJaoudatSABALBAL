@@ -37,7 +37,7 @@ function TopPage() {
     };
 
     function handleClick() {
-        if (document.getElementById("SideMenu").style.width == "40%"){
+        if (document.getElementById("SideMenu").style.width === "40%"){
             document.getElementById("Navbar").style.visibility = "hidden";
             document.getElementById("SideMenu").style.width="0%";
         }
