@@ -93,7 +93,7 @@ function Home() {
                                 <p className={"text-justify text-base leading-7 mt-5"}>
                                     Or you can find my complete portfolio here :
                                     <Link target="_blank" className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}
-                                          href={"https://www.figma.com/proto/lizKbzPM4zMi4izsgn4nKL/Portfolio?page-id=701%3A193&node-id=715%3A341&viewport=569%2C939%2C0.28&scaling=scale-down&starting-point-node-id=715%3A341"}>
+                                          href={"https://www.figma.com/proto/lizKbzPM4zMi4izsgn4nKL/Portfolio?page-id=701%3A193&node-id=715-341&viewport=865%2C577%2C0.49&scaling=scale-down&starting-point-node-id=715%3A341"}>
                                         portfolio Figma
                                     </Link>
                                 </p>
