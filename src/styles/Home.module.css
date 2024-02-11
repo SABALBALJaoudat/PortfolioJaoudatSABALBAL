@@ -6,3 +6,29 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+.canvas3d {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 700px !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s ease-out; /* Transition settings */
+}
+
+.animatedDiv {
+  animation: slideDownFadeOut 1s ease-out 2s forwards; /* Durée, easing, délai, mode de remplissage */
+}
+
+@keyframes slideDownFadeOut {
+  from {
+    transform: translateY(0);
+    visibility: visible;
+  }
+  to {
+    transform: translateY(100vh); /* Déplace la div vers le bas */
+    visibility: hidden;
+  }
+}

@@ -11,22 +11,33 @@ html{
     scroll-behavior: smooth;
 }
 
+.card{
+    @apply bg-gray-200 rounded-xl w-96 h-96
+}
+
 .card-zoom {
-    @apply relative flex items-center justify-center m-3 overflow-hidden
+    @apply relative flex items-center justify-center overflow-hidden
     bg-gradient-radial from-white via-gray-50 to-gray-300
-    shadow-xl dark:shadow-gray-700 dark:shadow-xl w-48 h-48 rounded-2xl;
+    shadow-xl dark:shadow-gray-700 dark:shadow-xl w-96 h-96 rounded-xl;
 }
 .card-zoom-image {
-    @apply absolute object-contain w-auto h-4/6 transition-all duration-500 ease-in-out transform bg-center bg-cover rounded-lg;
+    @apply absolute object-contain w-auto h-5/6 transition-all duration-500 ease-in-out transform bg-center bg-cover rounded-lg;
 }
 .card-zoom-text {
-    @apply text-xl font-black transition-all duration-500 ease-in-out transform scale-150 opacity-80;
+    @apply text-2xl font-black transition-all duration-500 ease-in-out transform scale-100 opacity-80;
+}
+.card-zoom-text-description {
+    @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80;
 }
 .card:hover .card-zoom-image {
-    @apply scale-150;
+    @apply scale-110;
 }
 .card:hover .card-zoom-text {
-    @apply scale-110;
+    @apply scale-100;
+}
+.card:hover .svg-transition {
+  opacity: 1;
+  transform: translate(10px, -10px);
 }
 
 @keyframes upDown{
