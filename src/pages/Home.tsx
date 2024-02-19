@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import TopPage from "@/components/TopPage";
 import Link from "next/link";
 import IconButton from "@/components/IconButton";
@@ -6,8 +6,8 @@ import { BsDownload, BsLinkedin } from "react-icons/bs";
 import TitleAnimation from "@/components/TitleAnimation";
 import { TypeAnimation } from "react-type-animation";
 import { IoMdContact } from "react-icons/io";
-import Spline from '@splinetool/react-spline';
-import { useEffect, useRef } from 'react';
+// import particlesJS from 'particles.js';
+// import Spline from '@splinetool/react-spline';
 import styles from '../styles/Home.module.css'
 
 
@@ -42,15 +42,40 @@ const SplineComponent = () => {
 
     return (
         <div ref={splineRef} className={styles.canvas3d}>
-            <Spline scene="https://draft.spline.design/uSw6wPRPcGgC2hX5/scene.splinecode" />
+            {/* <Spline scene="https://draft.spline.design/uSw6wPRPcGgC2hX5/scene.splinecode" /> */}
         </div>
     );
 };
+
+useEffect(() => {
+    // Créer une balise script
+    // const script = document.createElement('script');
+    // script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    // script.async = true;
+
+    // // Fonction de rappel une fois le script chargé
+    // script.onload = () => {
+    //     // Initialiser particlesJS après que le script soit chargé
+    //     particlesJS.load('particles-js', 'json/particles.json', function () { });
+    // };
+
+    // // Ajouter la balise script au document
+    // document.body.appendChild(script);
+
+    // // Nettoyer en enlevant la balise script quand le composant est démonté
+    // return () => {
+    //     document.body.removeChild(script);
+    // };
+    // particlesJS.load('particles-js', 'json/particles.json', function () { });
+}, []);
 
 function Home() {
     return (
         <div>
             <div className="max-h-screen flex flex-col justify-between bg-neutral-50 overflow-hidden">
+                <div id="particles-js"></div>
+
+                <script src="particles.js"></script>
                 <TopPage />
                 <div className="flex items-center justify-center">
 
