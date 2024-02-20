@@ -47,35 +47,35 @@ const SplineComponent = () => {
     );
 };
 
-useEffect(() => {
-    // Créer une balise script
-    // const script = document.createElement('script');
-    // script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-    // script.async = true;
+// useEffect(() => {
+// Créer une balise script
+// const script = document.createElement('script');
+// script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+// script.async = true;
 
-    // // Fonction de rappel une fois le script chargé
-    // script.onload = () => {
-    //     // Initialiser particlesJS après que le script soit chargé
-    //     particlesJS.load('particles-js', 'json/particles.json', function () { });
-    // };
+// // Fonction de rappel une fois le script chargé
+// script.onload = () => {
+//     // Initialiser particlesJS après que le script soit chargé
+//     particlesJS.load('particles-js', 'json/particles.json', function () { });
+// };
 
-    // // Ajouter la balise script au document
-    // document.body.appendChild(script);
+// // Ajouter la balise script au document
+// document.body.appendChild(script);
 
-    // // Nettoyer en enlevant la balise script quand le composant est démonté
-    // return () => {
-    //     document.body.removeChild(script);
-    // };
-    // particlesJS.load('particles-js', 'json/particles.json', function () { });
-}, []);
+// // Nettoyer en enlevant la balise script quand le composant est démonté
+// return () => {
+//     document.body.removeChild(script);
+// };
+// particlesJS.load('particles-js', 'json/particles.json', function () { });
+// }, []);
 
 function Home() {
     return (
         <div>
             <div className="max-h-screen flex flex-col justify-between bg-neutral-50 overflow-hidden">
-                <div id="particles-js"></div>
+                {/* <div id="particles-js"></div> */}
 
-                <script src="particles.js"></script>
+                {/* <script src="particles.js"></script> */}
                 <TopPage />
                 <div className="flex items-center justify-center">
 

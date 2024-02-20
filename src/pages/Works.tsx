@@ -9,7 +9,7 @@ import TopPage from "@/components/TopPage";
 
 export default function Works() {
     return (
-        <div className="min-h-screen flex flex-col bg-site dark:bg-site_dark bg-no-repeat bg-cover overflow-hidden">
+        <div className="min-h-screen flex flex-col justify-between overflow-hidden">
             <TopPage />
             <div className="p-8 mt-24">
                 <h2 id={"project"} className={"text-3xl font-semibold"}>

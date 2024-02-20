@@ -11,6 +11,7 @@ const images = [
     [cards1, "Ogoxe", "/OgoxePage", "Texte description rapide"],
     [cards2, "Karacal", "/KaracalPage", "Texte description rapide"],
     [cards3, "HMKL", "/HmklPage", "Texte description rapide"],
+    [cards3, "Noveltis", "/HmklPage", "Texte description rapide"],
 ]
 
 function Cards() {
@@ -35,11 +36,11 @@ function Cards() {
     // })
 
     return (
-        <div className="w-full grid grid-cols-3 gap-4 hiddenElem">
+        <div className="flex justify-start items-center flex-wrap gap-4 hiddenElem">
             {/* <div className="flex justify-center items-center"> */}
             {images.map((image, index) => {
                 return (
-                    <div className="card relative flex flex-col p-4 items-center" key={image[0]}>
+                    <div className="card p-4" key={image[0]}>
                         <Link className="card-zoom" href={image[2]}>
                             <Image src={image[0]} className="card-zoom-image" data-mdb-ripple="true"
                                 data-mdb-ripple-color="light" alt="" />
