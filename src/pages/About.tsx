@@ -5,6 +5,7 @@ import Image from "next/image";
 import photo from "@/image/Photo de profil.png";
 import Link from "next/link";
 import TopPage from '@/components/TopPage';
+import Skill from '@/components/Skill';
 import styles from '../styles/skills.module.css'
 
 function About() {
@@ -26,7 +27,7 @@ function About() {
                                             and I love working in a team to implement designs that deliver an exceptional experience
                                             for users.
                                         </p>
-                                        <p className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
+                                        <div className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
                                             You can have a look to my CV with all my projects :
                                             <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf'
                                                 target="_blank" rel="noopener noreferrer">
@@ -34,7 +35,7 @@ function About() {
                                                     <BsDownload className="h-5 w-5" />
                                                 </div>
                                             </a>
-                                        </p>
+                                        </div>
                                         <p className={"text-justify text-base leading-7 mt-5"}>
                                             Or you can find my complete portfolio here :
                                             <Link target="_blank" className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}
@@ -47,24 +48,7 @@ function About() {
                                         <Image src={photo}
                                             className="w-52 h-52 md:w-72 md:h-72" alt="" />
                                     </div>
-                                    <div className={styles.skills}>
-                                        <div className={styles.skill}>
-                                            <div className={styles.skill_content}>
-                                                <div className={styles.skill_image}>
-                                                    <BsDownload />
-                                                </div>
-                                                <div className={styles.skill_info_wrapper}>
-                                                    <div className={styles.skill_info}>
-                                                        <BsDownload />
-                                                        <div className={styles.skill_info_title}>
-                                                            <h3>Apartments</h3>
-                                                            <h4>Places to be apart. Wait, what?</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Skill />
                                 </div>
                             </div>
                         </div>
