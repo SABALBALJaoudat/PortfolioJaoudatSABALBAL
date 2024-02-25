@@ -2,17 +2,32 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
 import styles from '../styles/skills.module.scss'
-import cards1 from "../image/Ogoxe Logo 1.png";
+import angularLogo from "../image/Logo/Angular Logo.png";
+import ReactLogo from "../image/Logo/ReactJs Logo.png";
+import NextJsLogo from "../image/Logo/NextJs Logo.png";
+import VueJsLogo from "../image/Logo/VueJs Logo.png";
+import TypescriptLogo from "../image/Logo/Typescript Logo.png";
+import JavaLogo from "../image/Logo/Java Logo.png";
+import PythonLogo from "../image/Logo/Python Logo.jpg";
+import CLogo from "../image/Logo/C Logo.png";
+import FigmaLogo from "../image/Logo/Figma Logo.png";
+import JiraLogo from "../image/Logo/Jira Logo.png";
+import ConfluenceLogo from "../image/Logo/Confluence Logo.png";
 
 function Skill() {
 
     const images = [
-        [cards1, "React"],
-        [cards1, "Angular"],
-        [cards1, "VueJs"],
-        [cards1, "Typescript"],
-        [cards1, "Python"],
-        [cards1, "Figma"],
+        [ReactLogo, "ReactJs"],
+        [angularLogo, "Angular"],
+        [VueJsLogo, "VueJs"],
+        [NextJsLogo, "NextJs"],
+        [TypescriptLogo, "Typescript"],
+        [PythonLogo, "Python"],
+        [JavaLogo, "Java"],
+        [CLogo, "C"],
+        [FigmaLogo, "Figma"],
+        [JiraLogo, "Jira"],
+        [ConfluenceLogo, "Confluence"],
     ]
 
     const skillsContainerRef = useRef(null);

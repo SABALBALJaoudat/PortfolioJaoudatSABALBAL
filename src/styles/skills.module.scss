@@ -38,16 +38,16 @@
     width: 100%;
 }
 
-.skill::before {
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(65, 65, 65, 0.2),
-            transparent 40%);
-    z-index: 3;
-}
+// .skill::before {
+//     background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y),
+//             rgba(65, 65, 65, 0.2),
+//             transparent 40%);
+//     z-index: 3;
+// }
 
 .skill::after {
-    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(65, 65, 65, 0.7),
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+            rgba(65, 65, 65, 1),
             transparent 40%);
     z-index: 1;
 }
@@ -86,7 +86,7 @@ i {
     align-items: center;
     display: flex;
     height: 100px;
-    width: 100px;
+    width: 50px;
     justify-content: center;
     margin: 0px auto;
     overflow: hidden;

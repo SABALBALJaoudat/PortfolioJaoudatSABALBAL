@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  @apply font-poppins
+    @apply font-poppins
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .card {
-  @apply flex flex-col items-center bg-gray-200 shadow-xl rounded-xl;
-  width: 25vw;
-  min-width: 250px;
+    @apply flex flex-col items-center bg-gray-200 shadow-xl rounded-xl;
+    width: 25vw;
+    min-width: 250px;
 }
 
 .card-zoom {
-  @apply relative flex items-center justify-center overflow-hidden bg-gradient-radial from-white via-gray-50 to-gray-300 shadow-xl dark:shadow-gray-700 dark:shadow-xl rounded-xl;
-  /* margin-left: -60px;
+    @apply relative flex items-center justify-center overflow-hidden bg-gradient-radial from-white via-gray-50 to-gray-300 shadow-xl dark:shadow-gray-700 dark:shadow-xl rounded-xl;
+    /* margin-left: -60px;
     margin-right: 30px; */
-  width: 25vw;
-  height: 300px;
-  border-radius: inherit;
-  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
-  max-width: 280px;
+    width: 25vw;
+    height: 300px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+    max-width: 280px;
 }
 
 /* .card img {
@@ -45,64 +45,66 @@ html {
 } */
 
 .card-zoom-image {
-  @apply absolute object-contain w-auto h-5/6 transition-all duration-500 ease-in-out transform bg-center bg-cover rounded-lg;
+    @apply absolute object-contain w-auto h-5/6 transition-all duration-500 ease-in-out transform bg-center bg-cover rounded-lg;
 }
 
 .card-zoom-text {
-  @apply text-2xl font-black transition-all duration-500 ease-in-out transform scale-100 opacity-80;
+    @apply text-2xl font-black transition-all duration-500 ease-in-out transform scale-100 opacity-80;
 }
 
 .card-zoom-text-description {
-  @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80;
+    @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80;
 }
 
 .card:hover .card-zoom-image {
-  @apply scale-110;
+    @apply scale-110;
 }
 
 .card:hover .card-zoom-text {
-  @apply scale-100;
+    @apply scale-100;
 }
 
 .card:hover .svg-transition {
-  opacity: 1;
-  transform: translate(10px, -10px);
+    opacity: 1;
+    transform: translate(10px, -10px);
 }
 
 @keyframes upDown {
-  0% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
 
-  50% {
-    transform: scale(1.4);
-  }
+    50% {
+        transform: scale(1.4);
+    }
 
-  100% {
-    transform: scale(1);
-  }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .chevronDoubleDown {
-  animation: upDown 1.5s infinite
+    animation: upDown 1.5s infinite
 }
 
 .slide-in {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: red;
-  transform-origin: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: red;
+    transform-origin: bottom;
+    z-index: 50;
 }
 
 .slide-out {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: red;
-  transform-origin: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: red;
+    transform-origin: top;
+    z-index: 50;
 }
