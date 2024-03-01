@@ -54,7 +54,7 @@ function TopPage() {
     }
 
     return (
-        <div className="w-full h-20 lg:h-0 sticky top-0 z-30">
+        <div className="w-full h-20 lg:h-0 absolute top-0 z-30">
             <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
 
             {/* <HiMenu className="fixed top-5 right-5 h-10 w-10 z-30" role="button" onClick={handleClick}/> */}
@@ -64,7 +64,7 @@ function TopPage() {
                 Jaoudat Portfolio
             </h1> */}
 
-            <div className="top-5 z-10 pb-1 pt-8 w-screen flex items-center justify-center gap-x-2 lg:px-48 md:px-8 px-4 astro-nav">
+            <div className="absolute top-5 z-20 pb-1 pt-8 w-full flex items-center justify-center gap-x-2 lg:px-48 md:px-8 px-4 astro-nav">
                 <Link href="/" className="transition inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
                     text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
                     hover:dark:ring-zinc-600 before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 

@@ -40,15 +40,15 @@ function Cards() {
             {/* <div className="flex justify-center items-center"> */}
             {images.map((image, index) => {
                 return (
-                    <div className="card p-4" key={image[0]}>
+                    <div className="card relative p-4" key={image[0]}>
                         <Link className="card-zoom" href={image[2]}>
                             <Image src={image[0]} className="card-zoom-image" data-mdb-ripple="true"
                                 data-mdb-ripple-color="light" alt="" />
                         </Link>
                         <h1 className="card-zoom-text self-start mt-4">{image[1]}</h1>
                         <h1 className="card-zoom-text-description self-start mt-2">{image[3]}</h1>
-                        <div className="absolute bottom-0 right-0 w-12 h-12">
-                            <FiArrowUpRight className="h-6 w-6 absolute svg-transition bottom-0 left-0 opacity-0 transition-all duration-500 ease-in-out transform" />
+                        <div className="absolute bottom-0 right-4 w-12 h-12">
+                            <FiArrowUpRight className="h-6 w-6 svg-transition bottom-0 left-0 opacity-0 transition-all duration-500 ease-in-out transform" />
                         </div>
                     </div>
                 );

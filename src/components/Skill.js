@@ -62,26 +62,29 @@ function Skill() {
     }, []); // Le tableau vide assure que l'effet ne s'exécute qu'après le premier montage
 
     return (
-        <div ref={skillsContainerRef} className={styles.skills}>
-            {images.map((image, index) => {
-                return (
-                    <div className={styles.skill} key={image[0]}>
-                        <div className={styles.skill_content}>
-                            <div className={styles.skill_image}>
-                                <Image src={image[0]} data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light" alt="" />
-                            </div>
-                            <div className={styles.skill_info_wrapper}>
-                                <div className={styles.skill_info}>
-                                    <div className={styles.skill_info_title}>
-                                        {image[1]}
+        <div className='flex flex-col'>
+            <h2 className='mt-12'>All my skills</h2>
+            <div ref={skillsContainerRef} className={styles.skills}>
+                {images.map((image, index) => {
+                    return (
+                        <div className={styles.skill} key={image[0]}>
+                            <div className={styles.skill_content}>
+                                <div className={styles.skill_image}>
+                                    <Image src={image[0]} data-mdb-ripple="true"
+                                        data-mdb-ripple-color="light" alt="" />
+                                </div>
+                                <div className={styles.skill_info_wrapper}>
+                                    <div className={styles.skill_info}>
+                                        <div className={styles.skill_info_title}>
+                                            {image[1]}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div >
-                );
-            })}
+                        </div >
+                    );
+                })}
+            </div >
         </div >
     );
 }

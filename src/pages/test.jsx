@@ -1,34 +1,32 @@
 import React, { useEffect } from 'react';
 import styles from '../styles/Home.module.css';
-import Image from "next/image";
-import cards1 from "../image/Ogoxe Logo 1.png";
 import TopPage from "@/components/TopPage";
 
 function Test() {
-    //   useEffect(() => {
-    //     // S'assurer que le code s'exécute uniquement côté client
-    //     if (typeof window !== 'undefined') {
-    //       // Fonction pour charger et initialiser particlesJS
-    //       const loadAndInitParticles = () => {
-    //         if (!window.particlesJS) {
-    //           // Création dynamique du script
-    //           const script = document.createElement('script');
-    //           script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-    //           script.async = true;
-    //           script.onload = () => {
-    //             // Initialisation de particlesJS après le chargement du script
-    //             window.particlesJS('particles-js', particlesConfig);
-    //           };
-    //           document.body.appendChild(script);
-    //         } else {
-    //           // Si particlesJS est déjà chargé, l'initialiser directement
-    //           window.particlesJS('particles-js', particlesConfig);
-    //         }
-    //       };
+    useEffect(() => {
+        // S'assurer que le code s'exécute uniquement côté client
+        if (typeof window !== 'undefined') {
+            // Fonction pour charger et initialiser particlesJS
+            const loadAndInitParticles = () => {
+                if (!window.particlesJS) {
+                    // Création dynamique du script
+                    const script = document.createElement('script');
+                    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+                    script.async = true;
+                    script.onload = () => {
+                        // Initialisation de particlesJS après le chargement du script
+                        window.particlesJS('particles-js', particlesConfig);
+                    };
+                    document.body.appendChild(script);
+                } else {
+                    // Si particlesJS est déjà chargé, l'initialiser directement
+                    window.particlesJS('particles-js', particlesConfig);
+                }
+            };
 
-    //       loadAndInitParticles();
-    //     }
-    //   }, []);
+            loadAndInitParticles();
+        }
+    }, []);
 
     // Configuration des particules intégrée directement dans le composant
     const particlesConfig = {
@@ -145,19 +143,7 @@ function Test() {
     return (
         <div className={styles.container}>
             <TopPage />
-            {/* <div id="particles-js" className={styles.particles}></div> */}
-            <div class="card">
-                <Image src={cards1} data-mdb-ripple="true" data-mdb-ripple-color="light" alt="" />
-                <div>
-                    <h2>Kaye Morris</h2>
-                    <h3>UX Developer</h3>
-                    <p>
-                        Empowering users through captivating interfaces, turning ideas into
-                        pixel-perfect realities.
-                    </p>
-                    <button>Follow Account</button>
-                </div>
-            </div>
+            <div id="particles-js" className={styles.particles}></div>
         </div>
     );
 }
