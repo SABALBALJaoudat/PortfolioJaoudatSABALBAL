@@ -9,6 +9,8 @@ import { IoMdContact } from "react-icons/io";
 // import particlesJS from 'particles.js';
 // import Spline from '@splinetool/react-spline';
 import styles from '../styles/Home.module.css'
+import { StarsCore } from '@/components/Sparkles';
+import Spline from '@splinetool/react-spline';
 
 
 const SplineComponent = () => {
@@ -36,53 +38,30 @@ const SplineComponent = () => {
             if (splineRef.current) {
                 splineRef.current.style.visibility = 'visible';
                 splineRef.current.style.opacity = '1';
+                splineRef.current.style.zIndex = '5';
             }
-        }, 2000);
+        }, 1000);
     }, []);
 
     return (
         <div ref={splineRef} className={styles.canvas3d}>
-            {/* <Spline scene="https://draft.spline.design/uSw6wPRPcGgC2hX5/scene.splinecode" /> */}
+            <Spline scene='https://prod.spline.design/bLntjqMjBwx8FWlh/scene.splinecode' />
         </div>
     );
 };
 
-// useEffect(() => {
-// Créer une balise script
-// const script = document.createElement('script');
-// script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-// script.async = true;
-
-// // Fonction de rappel une fois le script chargé
-// script.onload = () => {
-//     // Initialiser particlesJS après que le script soit chargé
-//     particlesJS.load('particles-js', 'json/particles.json', function () { });
-// };
-
-// // Ajouter la balise script au document
-// document.body.appendChild(script);
-
-// // Nettoyer en enlevant la balise script quand le composant est démonté
-// return () => {
-//     document.body.removeChild(script);
-// };
-// particlesJS.load('particles-js', 'json/particles.json', function () { });
-// }, []);
 
 function Home() {
     return (
         <div>
-            <div className="max-h-screen flex flex-col justify-between bg-neutral-50 overflow-hidden">
-                {/* <div id="particles-js"></div> */}
-
-                {/* <script src="particles.js"></script> */}
+            <div className="h-screen w-full flex flex-col justify-between bg-neutral-50 overflow-hidden">
                 <TopPage />
                 <div className="flex items-center justify-center">
 
-                    <div className="max-w-5xl">
+                    <div className="max-w-5xl z-5">
                         <div className={"p-5"}>
                             <div className={"flex flex-col"}>
-                                <div className={"flex flex-col items-center justify-center h-screen w-full animatedDiv"}>
+                                {/* <div className={"flex flex-col items-center justify-center h-screen w-full animatedDiv"}>
                                     <div className={""}>
                                         <TitleAnimation />
                                     </div>
@@ -121,13 +100,21 @@ function Home() {
                                             </IconButton>
                                         </a>
                                     </div>
-                                    {/* <BsChevronDoubleDown className="chevronDoubleDown absolute bottom-5 w-8 h-8"/> */}
-                                </div>
+                                </div> */}
 
-                                {/* <SplineComponent /> */}
+                                <SplineComponent />
                             </div>
                         </div>
                     </div>
+                    <StarsCore
+                        id="tsparticlesfullpage"
+                        background="transparent"
+                        minSize={1.2}
+                        maxSize={2}
+                        particleDensity={100}
+                        className="absolute top-0 w-full h-screen z-1"
+                        particleColor="#000000"
+                    />
                 </div>
             </div>
         </div>
