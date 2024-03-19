@@ -11,7 +11,7 @@ export default function Works() {
     return (
         <div className="min-h-screen flex flex-col justify-between overflow-hidden">
             <TopPage />
-            <div className="p-8 mt-24">
+            <div className="flex flex-col items-center p-8 mt-24">
                 <h2 id={"project"} className={"text-3xl font-semibold"}>
                     All my Works
                 </h2>

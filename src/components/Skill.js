@@ -39,14 +39,12 @@ function Skill() {
                 // Utiliser querySelectorAll pour plus de flexibilité par rapport à getElementsByClassName
                 // const skills = skillsContainerRef.current.querySelectorAll('.skill');
                 const skills = skillsContainerRef.current.children;
-                console.log(skills);
 
                 for (const skill of skills) {
                     const rect = skill.getBoundingClientRect(),
                         x = e.clientX - rect.left,
                         y = e.clientY - rect.top;
 
-                    console.log(x, y);
                     skill.style.setProperty("--mouse-x", `${x}px`);
                     skill.style.setProperty("--mouse-y", `${y}px`);
                 }

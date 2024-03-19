@@ -18,8 +18,17 @@ html {
 
 .card {
   @apply flex flex-col items-center bg-gray-200 shadow-xl rounded-xl;
-  width: 25vw;
-  min-width: 250px;
+  width: 380px;
+  height: 460px;
+}
+
+.card-notAllowed {
+  cursor: not-allowed;
+}
+
+.card-nonVisible {
+  filter: grayscale(100%);
+  pointer-events: none;
 }
 
 .card-zoom {
@@ -53,7 +62,7 @@ html {
 }
 
 .card-zoom-text-description {
-  @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80;
+  @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80 w-5/6 text-justify;
 }
 
 .card:hover .card-zoom-image {

@@ -58,10 +58,10 @@ function Home() {
                 <TopPage />
                 <div className="flex items-center justify-center">
 
-                    <div className="max-w-5xl z-5">
+                    <div className="max-w-5xl z-10">
                         <div className={"p-5"}>
                             <div className={"flex flex-col"}>
-                                {/* <div className={"flex flex-col items-center justify-center h-screen w-full animatedDiv"}>
+                                <div className={"flex flex-col items-center justify-center h-screen w-full animatedDiv"}>
                                     <div className={""}>
                                         <TitleAnimation />
                                     </div>
@@ -100,9 +100,9 @@ function Home() {
                                             </IconButton>
                                         </a>
                                     </div>
-                                </div> */}
+                                </div>
 
-                                <SplineComponent />
+                                {/* <SplineComponent /> */}
                             </div>
                         </div>
                     </div>

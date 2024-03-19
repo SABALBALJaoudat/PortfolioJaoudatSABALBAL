@@ -73,11 +73,11 @@ export const StarsCore = (props: ParticlesProps) => {
                             events: {
                                 onClick: {
                                     enable: true,
-                                    mode: "push",
+                                    mode: "repulse",
                                 },
                                 onHover: {
                                     enable: true,
-                                    mode: "repulse",
+                                    mode: "attract",
                                 },
                                 resize: true as any,
                             },
@@ -86,9 +86,79 @@ export const StarsCore = (props: ParticlesProps) => {
                                     quantity: 10,
                                 },
                                 repulse: {
-                                    distance: 60,
-                                    duration: 0.4,
+                                    distance: 200,
+                                    duration: 0.8,
                                 },
+                                "trail": {
+                                    "delay": 1,
+                                    "pauseOnStop": false,
+                                    "quantity": 1
+                                },
+                                "attract": {
+                                    "distance": 200,
+                                    "duration": 0.4,
+                                    "easing": "ease-out-quad",
+                                    "factor": 1,
+                                    "maxSpeed": 50,
+                                    "speed": 1
+                                },
+                                "bounce": {
+                                    "distance": 200
+                                },
+                                "bubble": {
+                                    "distance": 250,
+                                    "duration": 2,
+                                    "mix": false,
+                                    "opacity": 0,
+                                    "size": 0,
+                                    "divs": {
+                                        "distance": 200,
+                                        "duration": 0.4,
+                                        "mix": false,
+                                        "selectors": {}
+                                    }
+                                },
+                                "connect": {
+                                    "distance": 80,
+                                    "links": {
+                                        "opacity": 0.5
+                                    },
+                                    "radius": 60
+                                },
+                                "grab": {
+                                    "distance": 400,
+                                    "links": {
+                                        "blink": false,
+                                        "consent": false,
+                                        "opacity": 1
+                                    }
+                                },
+                                "remove": {
+                                    "quantity": 2
+                                },
+                                "slow": {
+                                    "factor": 3,
+                                    "radius": 200
+                                },
+                                "light": {
+                                    "area": {
+                                        "gradient": {
+                                            "start": {
+                                                "value": "#ffffff"
+                                            },
+                                            "stop": {
+                                                "value": "#000000"
+                                            }
+                                        },
+                                        "radius": 1000
+                                    },
+                                    "shadow": {
+                                        "color": {
+                                            "value": "#000000"
+                                        },
+                                        "length": 2000
+                                    }
+                                }
                             },
                         },
                         particles: {
