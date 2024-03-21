@@ -1,4 +1,5 @@
 import React from 'react';
+import TopPage from "@/components/TopPage";
 
 import Carousel from '../components/Carousel.js';
 
@@ -12,30 +13,33 @@ const images = [extra1, extra2, extra3, extra4];
 
 function Karacal() {
     return (
-        <div className="flex items-center justify-center mt-24">
-            <div className={"max-w-5xl"}>
-                <div className={"p-5"}>
-                    <h2 className={"text-2xl font-semibold mb-8"}>
-                        Karacal / Extra
-                    </h2>
-                    <p className={"text-justify"}>
-                        Ux/Ui Design Lead project for Karacal (which will become Extra) in a team of 4 students,
-                        to create new interfaces to be added as a layer to the new application Extra<br/>
-                        <br/>
-                        Application of user-centred design :<br/>
-                    </p>
-                    <ol className={"list-disc ml-5 text-justify"}>
-                        <li>Creating interviews grid and conducting interviews</li>
-                        <li>Realisation of a user-centred iterative cycle</li>
-                        <li>Production of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
-                        <li>Production of paper prototypes (storyboard, sketch, video prototype)</li>
-                    </ol>
-                </div>
+        <div className="min-h-screen flex flex-col justify-between bg-site dark:bg-site_dark bg-no-repeat bg-cover overflow-hidden">
+            <TopPage />
+            <div className="flex items-center justify-center mt-24">
+                <div className={"max-w-5xl"}>
+                    <div className={"p-5"}>
+                        <h2 className={"text-2xl font-semibold mb-8"}>
+                            Karacal / Extra
+                        </h2>
+                        <p className={"text-justify"}>
+                            Ux/Ui Design Lead project for Karacal (which will become Extra) in a team of 4 students,
+                            to create new interfaces to be added as a layer to the new application Extra<br />
+                            <br />
+                            Application of user-centred design :<br />
+                        </p>
+                        <ol className={"list-disc ml-5 text-justify"}>
+                            <li>Creating interviews grid and conducting interviews</li>
+                            <li>Realisation of a user-centred iterative cycle</li>
+                            <li>Production of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
+                            <li>Production of paper prototypes (storyboard, sketch, video prototype)</li>
+                        </ol>
+                    </div>
 
-                <Carousel images={images}/>
+                    <Carousel images={images} />
+                </div>
             </div>
         </div>
     );
-};
+}
 
 export default Karacal;
