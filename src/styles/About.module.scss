@@ -1,0 +1,11 @@
+.path {
+    stroke-dasharray: 1000; /* Ajustez cette valeur en fonction de la longueur de votre chemin */
+    stroke-dashoffset: 1000; /* Assurez-vous que cette valeur est la même que stroke-dasharray au début */
+    animation: dash 5s linear infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
