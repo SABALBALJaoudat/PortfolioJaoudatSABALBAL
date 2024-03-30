@@ -31,20 +31,10 @@ function About() {
     setPath(progress);
   }, []);
 
-  const [test, setWidth] = useState(0);
-  const divRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    console.log(divRef)
-    if (divRef.current) {
-      setWidth(divRef.current.offsetWidth);
-    }
-  }, []);
-
   // Define a function to set the path of the SVG element
   const setPath = (progress: number) => {
     // Get the width of the window
-    const width = window.innerWidth * 0.2;
+    const width = 1024 * 1;
 
     // Set the "d" attribute of the SVG path element using a quadratic Bézier curve
     path.current?.setAttributeNS(
@@ -158,22 +148,22 @@ function About() {
                       <svg fill="none" preserveAspectRatio='xMidYMax meet'>
                         <path className={styles.path} strokeWidth="3" d="M1.5 48.0006C10.3333 32.8339 34.7 2.40059 61.5 2.00059C88.3 1.60059 105.5 28 118 45.0006C130.5 62.0012 216.94 98.0712 195 74.5006C186.385 65.2455 190.636 56.7575 215.5 45.0006C273.038 17.7942 107.302 19.9522 99.5 64.5C92.1645 106.383 149.5 109 140.5 107C131.5 105 113.3 87.8 130.5 95C152 104 157.5 106 157.5 109C157.5 112 146.5 116 130.5 122C117.7 126.8 125.167 121 130.5 117.5L140.5 111" stroke="black" stroke-width="3" stroke-linecap="round" />
                       </svg>
-                      <div className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
-                        You can have a look to my CV with all my projects :
+                      <span className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
+                        Tu peux jeter un coup d'oeil à mon CV ici :
                         <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf'
                           target="_blank" rel="noopener noreferrer">
-                          <div className={"m-2 p-2 bg-gradient-to-tr from-red-700 to-yellow-500 text-white rounded-md"}>
-                            <BsDownload className="h-5 w-5" />
+                          <div className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}>
+                            Cv Sabalbal Jaoudat
                           </div>
                         </a>
-                      </div>
-                      <p className={"text-justify text-base leading-7 mt-5"}>
+                      </span>
+                      {/* <p className={"text-justify text-base leading-7 mt-5"}>
                         Or you can find my complete portfolio here :
                         <Link target="_blank" className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}
                           href={"https://www.figma.com/proto/lizKbzPM4zMi4izsgn4nKL/Portfolio?page-id=701%3A193&node-id=715%3A341&viewport=569%2C939%2C0.28&scaling=scale-down&starting-point-node-id=715%3A341"}>
                           portfolio Figma
                         </Link>
-                      </p>
+                      </p> */}
                     </motion.div>
                   </div>
                   <div className={"flex justify-center mx-auto mt-14 md:my-auto"}>
@@ -191,7 +181,7 @@ function About() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: "-100px", opacity: 0 }}
                     transition={{ duration: 1 }}>
-                    <div className="relative w-80 h-5 mb-10 mt-10" ref={divRef}>
+                    <div className="relative w-full h-5 mb-10 mt-10">
                       <div
                         onMouseEnter={() => {
                           manageMouseEnter();
