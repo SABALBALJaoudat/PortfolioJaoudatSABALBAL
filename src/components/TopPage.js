@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 import { MdOutlineWorkOutline, MdOutlineHome, MdOutlinePhonelink } from "react-icons/md";
+import { TbCookieMan } from "react-icons/tb";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -89,7 +90,7 @@ function TopPage() {
                     before:duration-200 before:transform before:scale-50 before:translate-y-full before:opacity-0 before:hover:opacity-100 before:hover:scale-110 
                     before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
                     bg-zinc-100 dark:bg-zinc-900">
-                    <MdOutlinePhonelink />
+                    <TbCookieMan />
                     About Me
                 </Link>
                 {/* <Link href="/TestPage" className="transition duration-1000 ease-in-out inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 

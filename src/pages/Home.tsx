@@ -94,11 +94,6 @@ function Home() {
                                                 <BsDownload className="h-5 w-5" />
                                             </IconButton>
                                         </a>
-                                        <a href="#project">
-                                            <IconButton text={"Contact"} color={"bg-gradient-to-tr from-red-300 to-sky-400"}>
-                                                <IoMdContact className="h-5 w-5" />
-                                            </IconButton>
-                                        </a>
                                     </div>
                                 </div>
 
