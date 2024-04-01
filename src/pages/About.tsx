@@ -113,7 +113,7 @@ function About() {
         <TopPage />
         <div className="flex items-center justify-center p-8 mt-24">
 
-          <div className="max-w-5xl">
+          <div className="max-w-screen-2xl">
             <div className={"p-5"}>
               <div className={"flex flex-col"}>
                 <div className={"flex flex-wrap mt-14"}>

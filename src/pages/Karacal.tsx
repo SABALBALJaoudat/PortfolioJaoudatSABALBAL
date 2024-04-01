@@ -33,6 +33,29 @@ function Karacal() {
                             <li>Production of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
                             <li>Production of paper prototypes (storyboard, sketch, video prototype)</li>
                         </ol>
+                        {/* <p className={"text-justify"}>
+                            Le projet Karacal était un projet courant sur toute l'année scolaire 2020-2021. Nous étions en contact
+                            avec l'entreprise Karacal (qui deviendra Extra) pour laquelle nous devions réaliser de nouvelles interfaces.
+                            Celle-ci doit être une application proposant des interactions sur une carte 3D et concentrée sur l'expérience utilisateur
+                            autour de la gen Z.
+                            Dans une équipe de 4 étudiants, nous avons donc répartis nos taches sur 3 roles, chacun ayant passés un certains temps sur tous :<br />
+                            - Designer UX
+                            - Designer UI
+                            - Developpeur Front-End
+                            Nous devions proposer de nouvelles idées sur lesquels pouvaient travailler les developpeurs de l'entreprise par la suite.
+                            C'est ainsi que vous pourrez voir sur les images ci-dessous des maquettes de l'application, des prototypes, et des idées d'interactions
+                            que nous avons proposé.
+                            Nous avons également en parallele travailler sur des versions prototype en React et Unity de certaines de nos idées.
+                            <br />
+                            Application de la conception centrée sur l'utilisateur :<br />
+                        </p>
+                        <ol className={"list-disc ml-5 text-justify"}>
+                            <li>Création de grille d'entretiens et réalisation d'entretiens</li>
+                            <li>Réalisation d'un cycle itératif centré sur l'utilisateur</li>
+                            <li>Production de maquettes et prototypage (basse et haute fidélité) via Figma</li>
+                            <li>Production de prototypes papier (storyboard, croquis, prototype vidéo)</li>
+                            <li>Réalisation de prototype sous React et Unity</li>
+                        </ol> */}
                     </div>
 
                     <Carousel images={images} />

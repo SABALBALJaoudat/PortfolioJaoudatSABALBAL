@@ -38,6 +38,47 @@ function Hmkl() {
                                 <li>Recovery and analysis of user needs</li>
                             </ol>
                         </p>
+                        {/* <p className={"text-justify mt-5"}>
+                            L'objectif de ce stage était de créer un site web avec des exercices pour l'apprentissage des mathématiques dans les écoles primaires
+                            et ajouter l'intégration de diverses techniques d'interaction pour inclure les élèves en situation de handicap<br />
+                            <br />
+                            Via la mise en place d'une méthode centrée sur l'utilisateur :<br />
+                            <br />
+                            <ol className={"list-disc ml-5 text-justify"}>
+                                <li>Développement d'un site web (HTML/CSS, Javascript)</li>
+                                <li>Création de maquettes et prototypage (basse et haute fidélité) via Figma</li>
+                                <li>Récupération et analyse des besoins des utilisateurs</li>
+                            </ol>
+                            <br />
+                            <br />
+                            Ce stage c'est donc déroulé en 3 étapes :<br />
+                            Premierement la pise en main du projet, avec la compréhension des besoins et des attentes des utilisateurs.
+                            Le cas était assez particulier, car mon stage a commencé à la fin de l'année scolaire, et donc les élèves
+                            n'étaient plus facilement joignable. J'ai donc du me baser sur les retours des enseignants et des parents
+                            pour comprendre les besoins des élèves sur la premiere version du site. Celui-ci n'ayant pas eu de vrai phase de test
+                            lors du précédent stage réalisé par l'éleve avant moi, ce fut donc mon role que de réaliser cette étape.<br />
+                            <br />
+                            Ensuite, la réalisation de la maquette et du prototype. Avec les elements obtenus par les nombreux retours, j'ai pu
+                            faire une roadMap sur les elements manquants/nécéssaires aux eleves. J'ai donc réalisé une brainstorming avec mes tuteurs
+                            et certains enseignants pour répondre aux besoins identifiés. Ensuite, j'ai mis au propre 3 solutions pouvant répondre
+                            à ces besoins. Puis, j'ai réalisé des maquettes basse fidélité pour présenter une premiere version de ces solutions. Apres
+                            les avoir validés, j'ai réalisé des maquettes haute fidélité pour présenter une version plus proche du rendu final.<br />
+                            <br />
+                            Enfin, la réalisation du site. Une fois les maquettes validées, j'ai pu commencer le développement du site. J'ai utilisé
+                            les technologies HTML, CSS et Javascript pour réaliser le site. J'ai pu mettre en place des interactions pour rendre le site
+                            plus intuitif et plus facile d'utilisation pour les eleves. J'ai aussi pu mettre en place des interactions pour les eleves
+                            en situation de handicap, pour qu'ils puissent aussi utiliser le site sans difficulté.<br />
+                            Par exemple, le drag and drop ne pouvait pas forcement être utilisé par des eleves en situation de handicap. L'une des solutions
+                            a été par exemple de mettre en place un systeme de "suivi" de l'element à déplacer, pour que l'eleve puisse le déplacer sans
+                            avoir à maintenir le clique. Une autre proposition a été un systeme de double clique, plus orienté pour l'utilisation de tablette.
+                            Le premier clique doit pouvoir selectionné un élément, tandis que le second doit permettre de le positionner.<br />
+                            <br />
+                            Dans la réalisation du site, il a aussi été question de pouvoir retravailler l'exercice pour le rendre plus ludique et plus
+                            facile à être fait. A partir d'un certain nombre de jeton, il était compliqué pour l'eleve de correctement compter malgre la
+                            possibilité de faire du drag and drop sur les elements. J'ai donc proposé de mettre en place un systeme de "constelation à 5 éléments",
+                            l'objectif de ce dernier étant de permettre de compter plus facilement les éléments. Pour cela, des que l'eleve rapproche un jeton de la constellation,
+                            cela le placera automatiquement dans cette derniere, et ainsi facilitera le comptage.<br />
+                        </p> */}
                     </div>
 
                     <Carousel images={images} />
