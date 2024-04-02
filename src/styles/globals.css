@@ -22,6 +22,10 @@ html {
   height: 460px;
 }
 
+.card:hover {
+  @apply transition-colors duration-500 ease-in-out transform bg-gray-300;
+}
+
 .card-notAllowed {
   cursor: not-allowed;
 }

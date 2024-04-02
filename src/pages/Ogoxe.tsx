@@ -57,6 +57,50 @@ function Ogoxe() {
                             <li>Design of StoryMaps (from ArcGis) for partners</li>
                         </ol>
 
+                        <div className={"flex my-4"}>
+                            <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
+                                <h3 className={"mx-2"}>Developpement Web</h3>
+                                <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>Vue.Js</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>Javascript Vanilla</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>StoryBook</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>PhpMyAdmin</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>ArcGIS</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
+                                <h3 className={"mx-2"}>UI/UX Design</h3>
+                                <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>User interface</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>User experience</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>Adobe XD</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>Maze</h4>
+                                    </div>
+                                    <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                        <h4>User-centred design</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <Carousel images={images} />
 
                     </div>

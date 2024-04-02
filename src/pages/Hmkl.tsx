@@ -13,7 +13,7 @@ const images = [hmkl1, hmkl2, hmkl3];
 
 function Hmkl() {
     return (
-        <div className="min-h-screen flex flex-col justify-between bg-site dark:bg-site_dark bg-no-repeat bg-cover overflow-hidden">
+        <div className="min-h-screen flex flex-col justify-between overflow-hidden">
             <TopPage />
             <div className="flex items-center justify-center mt-24">
                 <div className={"max-w-5xl"}>
@@ -79,6 +79,44 @@ function Hmkl() {
                             l'objectif de ce dernier étant de permettre de compter plus facilement les éléments. Pour cela, des que l'eleve rapproche un jeton de la constellation,
                             cela le placera automatiquement dans cette derniere, et ainsi facilitera le comptage.<br />
                         </p> */}
+                    </div>
+
+                    <div className={"flex my-4"}>
+                        <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
+                            <h3 className={"mx-2"}>Developpement Web</h3>
+                            <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>Php</h4>
+                                </div>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>React Js</h4>
+                                </div>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>Javascript</h4>
+                                </div>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>MySql</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
+                            <h3 className={"mx-2"}>UI/UX Design</h3>
+                            <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>User interface</h4>
+                                </div>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>User experience</h4>
+                                </div>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>Figma</h4>
+                                </div>
+                                <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
+                                    <h4>User-centred design</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <Carousel images={images} />

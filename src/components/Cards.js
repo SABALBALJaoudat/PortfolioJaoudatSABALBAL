@@ -1,20 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from "next/image";
-import cards1 from "../image/Ogoxe Logo 1.png";
-import cards2 from "../image/Extra-Logo-nobg.png";
-import cards3 from "../image/Irit Logo.png";
+import cards_Ogoxe from "../image/Ogoxe Logo 1.png";
+import cards_Karacal from "../image/Extra_Logo.png";
+import cards_Irit from "../image/Irit Logo.png";
 import cards_Noveltis from "../image/Noveltis_logo.png";
+import cards_MasterIhm from "../image/Logo_Master_IHM.png";
+import cards_PersonalProject from "../image/Personal_Project.png";
 import Link from "next/link";
 import styles from '../styles/cards.module.css'
 import { FiArrowUpRight } from "react-icons/fi";
 
 const images = [
     [cards_Noveltis, "Noveltis", "/Noveltis", "Ma première expérience professionnelle en CDI en tant que développeur web Front-End", "non_visible"],
-    [cards1, "Ogoxe", "/Ogoxe", "Stage de fin d'études en tant qu'ingénieur Intéractions Homme-Machine", "visible"],
-    [cards2, "Karacal", "/Karacal", "Projet de fin d'étude alliant Ux/Ui Design et développement web Front-End", "visible"],
-    [cards3, "HMKL", "/Hmkl", "Stage de Master 1 en tant que développeur web", "visible"],
-    [cards3, "Projet Master", "/Hmkl", "Vous trouverez ici un apercu des différents projets au cours de mon master", "non_visible"],
-    [cards3, "Projet perso", "/Hmkl", "Voici les projets perso sur lesquels j'ai plus ou moins récemment travaillé", "non_visible"],
+    [cards_Ogoxe, "Ogoxe", "/Ogoxe", "Stage de fin d'études en tant qu'ingénieur Intéractions Homme-Machine", "visible"],
+    [cards_Karacal, "Karacal", "/Karacal", "Projet de fin d'étude alliant Ux/Ui Design et développement web Front-End", "visible"],
+    [cards_Irit, "HMKL", "/Hmkl", "Stage de Master 1 en tant que développeur web", "visible"],
+    [cards_MasterIhm, "Projet Master", "/Hmkl", "Vous trouverez ici un apercu des différents projets au cours de mon master", "non_visible"],
+    [cards_PersonalProject, "Projet perso", "/Hmkl", "Voici les projets perso sur lesquels j'ai plus ou moins récemment travaillé", "non_visible"],
 ]
 
 function Cards() {
