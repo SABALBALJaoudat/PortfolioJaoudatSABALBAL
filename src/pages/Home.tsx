@@ -67,10 +67,10 @@ function Home() {
                                     </div>
                                     <div className={"text-center mt-5"}>
                                         <h3 className={"text-3xl font-medium"}>
-                                            <span className={"mr-3"}>I am a</span>
+                                            <span className={"mr-3"}>Je suis un</span>
                                             <TypeAnimation
                                                 sequence={[
-                                                    "Front-End Developer",
+                                                    "Développeur Front-End",
                                                     1500,
                                                     "Ux/Ui Designer",
                                                     2000,

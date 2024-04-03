@@ -14,8 +14,8 @@ export default function Works() {
             <div className="flex items-center justify-center p-8 mt-24">
                 <div className="max-w-screen-2xl">
                     <div className="flex flex-col items-center p-8 mt-24">
-                        <h2 id={"project"} className={"text-3xl font-semibold"}>
-                            All my Works
+                        <h2 id={"project"}>
+                            Mes projets
                         </h2>
                         {/* <div className={"hidden lg:block lg:row-start-1 lg:col-start-3 w-full h-auto"}>
                     <Image src={workIllustration}

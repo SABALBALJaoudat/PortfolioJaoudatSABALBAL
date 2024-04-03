@@ -61,8 +61,8 @@ function Skill() {
 
     return (
         <div className='flex flex-col'>
-            <h2>All my skills</h2>
-            <div ref={skillsContainerRef} className={styles.skills}>
+            <h3>Mes skills</h3>
+            <div ref={skillsContainerRef} className={`${styles.skills} pt-5`}>
                 {images.map((image, index) => {
                     return (
                         <div className={styles.skill} key={image[0]}>

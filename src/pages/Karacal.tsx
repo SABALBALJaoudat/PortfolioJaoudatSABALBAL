@@ -39,78 +39,55 @@ function Karacal() {
                         <br />
                         <br />
                         <p className={"text-justify"}>
-                            Ux/Ui Design Lead project for Karacal (which will become Extra) in a team of 4 students,
-                            to create new interfaces to be added as a layer to the new application Extra<br />
+                            Projet d'UX/Ui et de développement web pour Karacal (qui deviendra Extra) en équipe de 4 étudiants,
+                            pour créer de nouvelles interfaces à ajouter en tant que couche à la nouvelle application Extra<br />
                             <br />
-                            Application of user-centred design :<br />
+                            Application de la méthode centrée sur l'utilisateur :<br />
+                            <ol className={"list-disc ml-5 text-justify"}>
+                                <li>Creating interviews grid and conducting interviews</li>
+                                <li>Realisation of a user-centred iterative cycle</li>
+                                <li>Production of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
+                                <li>Production of paper prototypes (storyboard, sketch, video prototype)</li>
+                            </ol>
                         </p>
-                        <ol className={"list-disc ml-5 text-justify"}>
-                            <li>Creating interviews grid and conducting interviews</li>
-                            <li>Realisation of a user-centred iterative cycle</li>
-                            <li>Production of mock-up and prototyping (low-fidelity and high-fidelity) via Figma</li>
-                            <li>Production of paper prototypes (storyboard, sketch, video prototype)</li>
-                        </ol>
-                        {/* <p className={"text-justify"}>
-                            Le projet Karacal était un projet courant sur toute l'année scolaire 2020-2021. Nous étions en contact
-                            avec l'entreprise Karacal (qui deviendra Extra) pour laquelle nous devions réaliser de nouvelles interfaces.
-                            Celle-ci doit être une application proposant des interactions sur une carte 3D et concentrée sur l'expérience utilisateur
-                            autour de la gen Z.
-                            Dans une équipe de 4 étudiants, nous avons donc répartis nos taches sur 3 roles, chacun ayant passés un certains temps sur tous :<br />
-                            - Designer UX
-                            - Designer UI
-                            - Developpeur Front-End
-                            Nous devions proposer de nouvelles idées sur lesquels pouvaient travailler les developpeurs de l'entreprise par la suite.
-                            C'est ainsi que vous pourrez voir sur les images ci-dessous des maquettes de l'application, des prototypes, et des idées d'interactions
-                            que nous avons proposé.
-                            Nous avons également en parallele travailler sur des versions prototype en React et Unity de certaines de nos idées.
-                            <br />
-                            Application de la conception centrée sur l'utilisateur :<br />
-                        </p>
-                        <ol className={"list-disc ml-5 text-justify"}>
-                            <li>Création de grille d'entretiens et réalisation d'entretiens</li>
-                            <li>Réalisation d'un cycle itératif centré sur l'utilisateur</li>
-                            <li>Production de maquettes et prototypage (basse et haute fidélité) via Figma</li>
-                            <li>Production de prototypes papier (storyboard, croquis, prototype vidéo)</li>
-                            <li>Réalisation de prototype sous React et Unity</li>
-                        </ol> */}
                     </div>
 
                     <div className={"flex my-4"}>
                         <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
-                            <h3 className={"mx-2"}>Developpement Web</h3>
+                            <h4 className={"mx-2"}>Developpement Web</h4>
                             <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>React Js</h4>
+                                    React Js
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>TypeScript</h4>
+                                    TypeScript
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>Unity</h4>
+                                    Unity
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>C#</h4>
+                                    C#
                                 </div>
                             </div>
                         </div>
 
                         <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
-                            <h3 className={"mx-2"}>UI/UX Design</h3>
+                            <h4 className={"mx-2"}>UI/UX Design</h4>
                             <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>User interface</h4>
+                                    User interface
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>User experience</h4>
+                                    User experience
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>Figma</h4>
+                                    Figma
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>Maze</h4>
+                                    Maze
                                 </div>
                                 <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                    <h4>User-centred design</h4>
+                                    User-centred design
                                 </div>
                             </div>
                         </div>

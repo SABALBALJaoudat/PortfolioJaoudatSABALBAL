@@ -40,14 +40,15 @@ function TitleAnimation() {
             tl.to(path, {
                 strokeDashoffset: 0,
                 autoRound: false,
-                duration: 2,
+                duration: 4,
                 ease: 'power3.out'
             }, index * 0.25 + delay);
         });
     }
 
     useEffect(() => {
-        if (firstReload < 2){
+        console.log("First Reload: ", firstReload)
+        if (firstReload < 3){
             document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
             firstReload++;
         }else{

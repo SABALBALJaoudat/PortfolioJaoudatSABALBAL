@@ -40,62 +40,61 @@ function Ogoxe() {
                         </Link>
                         <br />
                         <br />
-                        <p className={"text-justify mt-5"}>
-                            UX and UI design work on an internal Smart Device project<br />
-                            UX and UI design work on the European project (Interreg France-Channel-England) called Building Resilience
-                            in Flood Disadvantaged Communities (BRIC)<br />
+                        <p className={"text-justify"}>
+                            Projet de design UX/UI et de développement front-end sur un projet interne Smart Device et sur un
+                            projet européen (Interreg France-Channel-England) appelé Building Resilience in Flood Disadvantaged Communities (BRIC)<br />
                             <br />
-                            Application of user-centred design :<br />
+                            Application de la méthode centrée sur l'utilisateur :<br />
+                            <ol className={"list-disc ml-5 text-justify"}>
+                                <li>Analyse, compréhension et définition des clients (persona, userflow...)</li>
+                                <li>Maquettage et prototypage (basse et haute fidélité), choix de la charte design/graphique (palette de couleurs,
+                                    typographie, composants...)</li>
+                                <li>Préparation et exécution d'ateliers de co-design (Anglais/Français), exécution de tests utilisateurs
+                                    (Maze, tests en live...), analyse des résultats</li>
+                                <li>Développement Front End (Vue.Js, HTML/JS/CSS)</li>
+                                <li>Design de StoryMaps (à partir d'ArcGis) pour les partenaires</li>
+                            </ol>
                         </p>
-                        <ol className={"list-disc ml-5 text-justify"}>
-                            <li>Analysis, understanding and definition of customers (persona, userflow...)</li>
-                            <li>Mock-up and prototyping (low-fidelity and high-fidelity), choice of design / graphic charter (colour palette,
-                                typography, components...)</li>
-                            <li>Preparation and execution of co-design workshops (English / French), execution of user tests
-                                (Maze, live tests...), analysis of results</li>
-                            <li>Front End Development (Vue.Js, HTML/JS/CSS)</li>
-                            <li>Design of StoryMaps (from ArcGis) for partners</li>
-                        </ol>
 
                         <div className={"flex my-4"}>
                             <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
-                                <h3 className={"mx-2"}>Developpement Web</h3>
+                                <h4 className={"mx-2"}>Developpement Web</h4>
                                 <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>Vue.Js</h4>
+                                        Vue.Js
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>Javascript Vanilla</h4>
+                                        Javascript Vanilla
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>StoryBook</h4>
+                                        StoryBook
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>PhpMyAdmin</h4>
+                                        PhpMyAdmin
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>ArcGIS</h4>
+                                        ArcGIS
                                     </div>
                                 </div>
                             </div>
 
                             <div className={"w-1/2 h-48 flex flex-col justify-between p-2 m-2 rounded-md bg-slate-300"}>
-                                <h3 className={"mx-2"}>UI/UX Design</h3>
+                                <h4 className={"mx-2"}>UI/UX Design</h4>
                                 <div className={"w-fit h-fit flex flex-row flex-wrap rounded-md"}>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>User interface</h4>
+                                        User interface
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>User experience</h4>
+                                        User experience
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>Adobe XD</h4>
+                                        Adobe XD
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>Maze</h4>
+                                        Maze
                                     </div>
                                     <div className={"bg-slate-200 w-fit h-fit p-1 m-1 rounded-md"}>
-                                        <h4>User-centred design</h4>
+                                        User-centred design
                                     </div>
                                 </div>
                             </div>

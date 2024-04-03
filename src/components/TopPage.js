@@ -73,7 +73,7 @@ function TopPage() {
                     before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
                     bg-zinc-100 dark:bg-zinc-900">
                     <MdOutlineHome />
-                    Home
+                    Acceuil
                 </Link>
                 <Link href="/Works" className="transition inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
                     text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
@@ -82,7 +82,7 @@ function TopPage() {
                     before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
                     bg-zinc-100 dark:bg-zinc-900">
                     <MdOutlineWorkOutline />
-                    Works
+                    Expérience
                 </Link>
                 <Link href="/About" className="transition duration-1000 ease-in-out inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
                     text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
@@ -91,7 +91,7 @@ function TopPage() {
                     before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
                     bg-zinc-100 dark:bg-zinc-900">
                     <TbCookieMan />
-                    About Me
+                    A propos de moi
                 </Link>
                 {/* <Link href="/TestPage" className="transition duration-1000 ease-in-out inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
                     text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
