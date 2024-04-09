@@ -65,7 +65,7 @@ function Skill() {
             <div ref={skillsContainerRef} className={`${styles.skills} pt-5`}>
                 {images.map((image, index) => {
                     return (
-                        <div className={styles.skill} key={image[0]}>
+                        <div className={styles.skill} key={index}>
                             <div className={styles.skill_content}>
                                 <div className={styles.skill_image}>
                                     <Image src={image[0]} data-mdb-ripple="true"

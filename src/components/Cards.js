@@ -44,7 +44,7 @@ function Cards() {
         <div className="flex justify-center items-center flex-wrap gap-4 hiddenElem">
             {images.map((image, index) => {
                 return (
-                    <div className={`${image[4] === 'non_visible' ? 'card-notAllowed' : ''}`} key={image[0]}>
+                    <div className={`${image[4] === 'non_visible' ? 'card-notAllowed' : ''}`} key={index}>
                         <Link className={`card relative p-4 ${image[4] === 'non_visible' ? 'card-nonVisible' : ''}`} href={image[2]}>
                             <div className="card-zoom">
                                 <Image src={image[0]} className="card-zoom-image" data-mdb-ripple="true"
