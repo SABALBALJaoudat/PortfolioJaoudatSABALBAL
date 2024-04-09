@@ -47,17 +47,17 @@ function TitleAnimation() {
     }
 
     useEffect(() => {
-        console.log("First Reload: ", firstReload)
-        if (firstReload < 3){
-            document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
-            firstReload++;
-        }else{
-            if (currentTheme ==="dark"){
-                document.querySelectorAll('.motion path, .motion line').forEach(p => p.setAttribute('stroke', '#F8E3EA'));
-            }else{
-                document.querySelectorAll('.motion path, .motion line').forEach(p => p.setAttribute('stroke', '#0F0F0F'));
-            }
-        }
+        // if (firstReload < 3){
+        //     document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
+        //     firstReload++;
+        // }else{
+        //     if (currentTheme ==="dark"){
+        //         document.querySelectorAll('.motion path, .motion line').forEach(p => p.setAttribute('stroke', '#F8E3EA'));
+        //     }else{
+        //         document.querySelectorAll('.motion path, .motion line').forEach(p => p.setAttribute('stroke', '#0F0F0F'));
+        //     }
+        // }
+        document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
     }, [currentTheme])
 
     return (
