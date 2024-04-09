@@ -146,7 +146,7 @@ function About() {
                         subtilités
                       </p>
                       <svg fill="none" preserveAspectRatio='xMidYMax meet'>
-                        <path className={styles.path} strokeWidth="3" d="M1.5 48.0006C10.3333 32.8339 34.7 2.40059 61.5 2.00059C88.3 1.60059 105.5 28 118 45.0006C130.5 62.0012 216.94 98.0712 195 74.5006C186.385 65.2455 190.636 56.7575 215.5 45.0006C273.038 17.7942 107.302 19.9522 99.5 64.5C92.1645 106.383 149.5 109 140.5 107C131.5 105 113.3 87.8 130.5 95C152 104 157.5 106 157.5 109C157.5 112 146.5 116 130.5 122C117.7 126.8 125.167 121 130.5 117.5L140.5 111" stroke="black" stroke-width="3" stroke-linecap="round" />
+                        <path className={styles.path} strokeWidth="3" stroke="black" strokeLinecap="round" d="M1.5 48.0006C10.3333 32.8339 34.7 2.40059 61.5 2.00059C88.3 1.60059 105.5 28 118 45.0006C130.5 62.0012 216.94 98.0712 195 74.5006C186.385 65.2455 190.636 56.7575 215.5 45.0006C273.038 17.7942 107.302 19.9522 99.5 64.5C92.1645 106.383 149.5 109 140.5 107C131.5 105 113.3 87.8 130.5 95C152 104 157.5 106 157.5 109C157.5 112 146.5 116 130.5 122C117.7 126.8 125.167 121 130.5 117.5L140.5 111" />
                       </svg>
                       <span className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
                         Tu peux jeter un coup d'oeil à mon CV ici :
