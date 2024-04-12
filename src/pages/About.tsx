@@ -17,6 +17,8 @@ interface MouseEvent {
 }
 
 function About() {
+  const [isZoomed, setIsZoomed] = useState(false);
+
   // Define a reference to an SVGPathElement
   const path = useRef<SVGPathElement>(null);
 
@@ -107,6 +109,35 @@ function About() {
     progress = 0;
   };
 
+  useEffect(() => {
+    // Movement animation for card_movement
+    const cardMovement = document.querySelector(".card_movement") as HTMLElement;
+    const container = document.querySelector(".container") as HTMLElement;
+    const info = document.querySelector(".info") as HTMLElement;
+  
+    //Moving animation Event
+    container?.addEventListener("mousemove", (e) => {
+      let rect = container.getBoundingClientRect();
+      let xAxis = ( e.clientX - rect.left - cardMovement.clientWidth / 2 ) / 20;
+      let yAxis = ( e.clientY - rect.top - cardMovement.clientHeight / 2 ) / 20;
+      cardMovement.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+
+    //Animate In
+    container.addEventListener("mouseenter", (e) => {
+      cardMovement.style.transition = "none";
+      //Popout
+      info.style.transform = "translateZ(150px)";
+    });
+    //Animate Out
+    container.addEventListener("mouseleave", (e) => {
+      cardMovement.style.transition = "all 0.5s ease";
+      cardMovement.style.transform = `rotateY(0deg) rotateX(0deg)`;
+      //Popback
+      info.style.transform = "translateZ(0px)";
+    });
+  }, []);
+
   return (
     <div>
       <div className="min-h-screen flex flex-col overflow-hidden bg-neutral-50">
@@ -133,21 +164,21 @@ function About() {
                       <p className={"text-justify text-base leading-7"}>
                         Salut !
                         Je suis Jaoudat, un développeur Front-End et Ux/Ui Designer passionné et motivé.
-                        Je te souhaite une bienvenue chaleureuse sur mon site web.
-                        Je vais t'expliquer brievement ce que tu peux trouver dessus.
-                        Ce site web est un portfolio qui regroupe mes projets de développement et de design.
-                        MAIS PAS QUE !
+                        Je te souhaite une bienvenue chaleureuse sur mon site web.<br/>
+                        Je vais t'expliquer brievement ce que tu peux trouver dessus.<br/>
+                        Ce site web est un portfolio qui regroupe mes projets de développement et de design.<br/><br/>
+                        MAIS PAS QUE !<br/><br/>
                         Tu vas aussi y retrouver beaucoup d'element caché ici et la, car ce site est aussi un peu
                         un terrain de jeu pour moi. Cest une sorte de bac à sable pour tester des nouvelles choses.
-                        Ce sont surtout des elements graphiques et des animations.
+                        Ce sont surtout des elements graphiques et des animations.<br/>
                         A termes, je souhaite que ce site serve également de Hub pour mes projets Webs professionnels
-                        (lorsque ceux-ci sont disponible en fonction des clients) mais aussi personnels.
+                        (lorsque ceux-ci sont disponible en fonction des clients) mais aussi personnels.<br/>
                         J'espère que tu vas apprécier ta visite, et que tu auras le temps de repérer toutes les
                         subtilités
                       </p>
-                      <svg fill="none" preserveAspectRatio='xMidYMax meet'>
+                      {/* <svg fill="none" preserveAspectRatio='xMidYMax meet'>
                         <path className={styles.path} strokeWidth="3" stroke="black" strokeLinecap="round" d="M1.5 48.0006C10.3333 32.8339 34.7 2.40059 61.5 2.00059C88.3 1.60059 105.5 28 118 45.0006C130.5 62.0012 216.94 98.0712 195 74.5006C186.385 65.2455 190.636 56.7575 215.5 45.0006C273.038 17.7942 107.302 19.9522 99.5 64.5C92.1645 106.383 149.5 109 140.5 107C131.5 105 113.3 87.8 130.5 95C152 104 157.5 106 157.5 109C157.5 112 146.5 116 130.5 122C117.7 126.8 125.167 121 130.5 117.5L140.5 111" />
-                      </svg>
+                      </svg> */}
                       <span className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
                         Tu peux jeter un coup d'oeil à mon CV ici :
                         <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf'
@@ -172,8 +203,25 @@ function About() {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: "-100px", opacity: 0 }}
                       transition={{ duration: 1 }}>
-                      <Image src={photo}
-                        className="w-52 h-52 md:w-72 md:h-72" alt="" />
+                      <div className={`${styles.container} container`}>
+                        <div className={`${styles.card_movement} card_movement`}>
+                          <div className={styles.photo}>
+                          <Image src={photo}
+                        className={`${isZoomed ? "styles.zoomed" : "styles.not_zoomed"} ${styles.not_zoomed}`} alt="" onClick={() => setIsZoomed(!isZoomed)} />
+                          </div>
+                          <div className={`${styles.info} info`}>
+                            <h1>
+                              SABALBAL Jaoudat
+                            </h1>
+                            <h1>
+                              Ingénieur Front-End
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                      {/* <Image src={photo}
+                        className={`${isZoomed ? "styles.zoomed" : "styles.not_zoomed"} ${styles.not_zoomed}`} alt="" onClick={() => setIsZoomed(!isZoomed)} /> */}
+                        {/* Changer ici les "" */}
                     </motion.div>
                   </div>
                   <motion.div className='slide-out-element'

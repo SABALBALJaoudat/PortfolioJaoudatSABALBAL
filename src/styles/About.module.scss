@@ -11,3 +11,42 @@
     stroke-dashoffset: 0;
   }
 }
+
+.imageProfil{
+  @apply absolute w-52 h-52 md:w-72 md:h-72 left-0 top-0;
+}
+
+.not_zoomed {
+  @apply w-52 h-52 md:w-72 md:h-72 left-0 top-0;
+  transition: transform 1s, top 1s, left 1s;
+}
+
+.zoomed {
+  position: absolute;
+  transform: scale(2);
+  transition: transform 1s, top 1s, left 1s;
+  left: 25%;
+  top: 25%;
+}
+
+.container{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.card_movement {
+  transform-style: preserve-3d;
+  background: white;
+  width: fit-content;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 5rem;
+  margin: 5rem;
+}
+
+.info{
+  transition: all 0.75s ease-out;
+}
