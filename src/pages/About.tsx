@@ -1,9 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import React, { useState } from 'react'
 import { useRef, useEffect } from 'react';
 import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
 import photo from "@/image/Photo de profil.png";
+import card_photo from "@/image/Card_photo_jaoudat.png";
+import card_background from "@/image/Card_background_jaoudat.png";
 import Link from "next/link";
 import TopPage from '@/components/TopPage';
 import Skill from '@/components/Skill';
@@ -114,12 +117,14 @@ function About() {
     const cardMovement = document.querySelector(".card_movement") as HTMLElement;
     const container = document.querySelector(".container") as HTMLElement;
     const info = document.querySelector(".info") as HTMLElement;
-  
+    const card_background = document.querySelector(".card_background") as HTMLElement;
+    const card_photo = document.querySelector(".card_photo") as HTMLElement;
+
     //Moving animation Event
     container?.addEventListener("mousemove", (e) => {
       let rect = container.getBoundingClientRect();
-      let xAxis = ( e.clientX - rect.left - cardMovement.clientWidth / 2 ) / 20;
-      let yAxis = ( e.clientY - rect.top - cardMovement.clientHeight / 2 ) / 20;
+      let xAxis = (e.clientX - rect.left - cardMovement.clientWidth / 2) / 20;
+      let yAxis = (e.clientY - rect.top - cardMovement.clientHeight / 2) / 20;
       cardMovement.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     });
 
@@ -127,7 +132,9 @@ function About() {
     container.addEventListener("mouseenter", (e) => {
       cardMovement.style.transition = "none";
       //Popout
-      info.style.transform = "translateZ(150px)";
+      info.style.transform = "translateZ(75px)";
+      card_background.style.transform = "translateZ(25px)";
+      card_photo.style.transform = "translateZ(50px)";
     });
     //Animate Out
     container.addEventListener("mouseleave", (e) => {
@@ -135,6 +142,8 @@ function About() {
       cardMovement.style.transform = `rotateY(0deg) rotateX(0deg)`;
       //Popback
       info.style.transform = "translateZ(0px)";
+      card_background.style.transform = "translateZ(0px)";
+      card_photo.style.transform = "translateZ(0px)";
     });
   }, []);
 
@@ -164,15 +173,15 @@ function About() {
                       <p className={"text-justify text-base leading-7"}>
                         Salut !
                         Je suis Jaoudat, un développeur Front-End et Ux/Ui Designer passionné et motivé.
-                        Je te souhaite une bienvenue chaleureuse sur mon site web.<br/>
-                        Je vais t'expliquer brievement ce que tu peux trouver dessus.<br/>
-                        Ce site web est un portfolio qui regroupe mes projets de développement et de design.<br/><br/>
-                        MAIS PAS QUE !<br/><br/>
+                        Je te souhaite une bienvenue chaleureuse sur mon site web.<br />
+                        Je vais t'expliquer brievement ce que tu peux trouver dessus.<br />
+                        Ce site web est un portfolio qui regroupe mes projets de développement et de design.<br /><br />
+                        MAIS PAS QUE !<br /><br />
                         Tu vas aussi y retrouver beaucoup d'element caché ici et la, car ce site est aussi un peu
                         un terrain de jeu pour moi. Cest une sorte de bac à sable pour tester des nouvelles choses.
-                        Ce sont surtout des elements graphiques et des animations.<br/>
+                        Ce sont surtout des elements graphiques et des animations.<br />
                         A termes, je souhaite que ce site serve également de Hub pour mes projets Webs professionnels
-                        (lorsque ceux-ci sont disponible en fonction des clients) mais aussi personnels.<br/>
+                        (lorsque ceux-ci sont disponible en fonction des clients) mais aussi personnels.<br />
                         J'espère que tu vas apprécier ta visite, et que tu auras le temps de repérer toutes les
                         subtilités
                       </p>
@@ -205,11 +214,17 @@ function About() {
                       transition={{ duration: 1 }}>
                       <div className={`${styles.container} container`}>
                         <div className={`${styles.card_movement} card_movement`}>
-                          <div className={styles.photo}>
-                          <Image src={photo}
-                        className={`${isZoomed ? "styles.zoomed" : "styles.not_zoomed"} ${styles.not_zoomed}`} alt="" onClick={() => setIsZoomed(!isZoomed)} />
+                          <div className={`${styles.card_background} card_background`}>
+                            <div className={""}>
+                              <Image className="h-48 w-48" src={card_background} alt='' />
+                            </div>
                           </div>
-                          <div className={`${styles.info} info`}>
+                          <div className={`${styles.card_photo} card_photo`}>
+                            <div className={""}>
+                              <Image className="w-32" src={card_photo} alt='' />
+                            </div>
+                          </div>
+                          <div className={`${styles.info} info pt-5`}>
                             <h1>
                               SABALBAL Jaoudat
                             </h1>
@@ -221,7 +236,7 @@ function About() {
                       </div>
                       {/* <Image src={photo}
                         className={`${isZoomed ? "styles.zoomed" : "styles.not_zoomed"} ${styles.not_zoomed}`} alt="" onClick={() => setIsZoomed(!isZoomed)} /> */}
-                        {/* Changer ici les "" */}
+                      {/* Changer ici les "" */}
                     </motion.div>
                   </div>
                   <motion.div className='slide-out-element'
@@ -229,7 +244,7 @@ function About() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: "-100px", opacity: 0 }}
                     transition={{ duration: 1 }}>
-                    <div className="relative w-full h-5 mb-10 mt-10">
+                    <div className="relative w-full max-w-[1030px] h-5 mb-10 mt-10">
                       <div
                         onMouseEnter={() => {
                           manageMouseEnter();
@@ -256,8 +271,8 @@ function About() {
             </div>
           </div>
         </div >
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 

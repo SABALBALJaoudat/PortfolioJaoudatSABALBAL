@@ -11,7 +11,7 @@ import styles from '../styles/cards.module.css'
 import { FiArrowUpRight } from "react-icons/fi";
 
 const images = [
-    [cards_Noveltis, "Noveltis", "/Noveltis", "Ma première expérience professionnelle en CDI en tant qu'Ingénieur web Front-End", "non_visible"],
+    [cards_Noveltis, "Noveltis", "/Noveltis", "Expérience en tant qu'Ingénieur Web Front-End", "non_visible"],
     [cards_Ogoxe, "Ogoxe", "/Ogoxe", "Stage de fin d'études en tant qu'Ingénieur Intéractions Homme-Machine", "visible"],
     [cards_Karacal, "Karacal", "/Karacal", "Projet de fin d'étude alliant Ux/Ui Design et développement web Front-End", "visible"],
     [cards_Irit, "HMKL", "/Hmkl", "Stage de Master 1 en tant que développeur web", "visible"],

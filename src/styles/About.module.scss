@@ -38,15 +38,28 @@
 }
 
 .card_movement {
+  display: grid;
   transform-style: preserve-3d;
+  perspective: 600px;
   background: white;
   width: fit-content;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
-  padding: 5rem;
-  margin: 5rem;
+  padding: 3rem;
+  margin: 3rem;
 }
 
 .info{
+  grid-area: 2 / 2;
+  position: relative;
+  transition: all 0.75s ease-out;
+}
+
+.card_image {
+  transition: all 0.75s ease-out;
+}
+
+.card_background, .card_photo {
+  grid-area: 1 / 2;
   transition: all 0.75s ease-out;
 }

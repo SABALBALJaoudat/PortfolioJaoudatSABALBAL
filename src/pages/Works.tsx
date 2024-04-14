@@ -13,7 +13,7 @@ export default function Works() {
             <TopPage />
             <div className="flex items-center justify-center p-8 mt-24">
                 <div className="max-w-screen-2xl">
-                    <div className="flex flex-col items-center p-8 mt-24">
+                    <div className="flex flex-col items-center p-8">
                         <h2 id={"project"}>
                             Mes projets
                         </h2>
