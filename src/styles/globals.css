@@ -9,7 +9,8 @@
 }
 
 body {
-  @apply font-poppins color: #000;
+  @apply font-poppins;
+  color: #000;
 }
 
 html {
