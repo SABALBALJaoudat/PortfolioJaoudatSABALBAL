@@ -14,7 +14,7 @@ const images = [hmkl1, hmkl2, hmkl3];
 
 function Hmkl() {
     return (
-        <div className="min-h-screen flex flex-col justify-between overflow-hidden">
+        <div className="min-h-screen flex flex-col justify-between overflow-hidden bg-neutral-50">
             <TopPage />
             <div className="flex items-center justify-center mt-24">
                 <div className={"max-w-5xl"}>

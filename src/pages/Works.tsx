@@ -9,7 +9,7 @@ import TopPage from "@/components/TopPage";
 
 export default function Works() {
     return (
-        <div className="min-h-screen flex flex-col justify-between overflow-hidden">
+        <div className="min-h-screen flex flex-col justify-between overflow-hidden bg-neutral-50">
             <TopPage />
             <div className="flex items-center justify-center p-8 mt-24">
                 <div className="max-w-screen-2xl">
