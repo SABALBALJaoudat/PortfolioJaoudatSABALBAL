@@ -10,31 +10,31 @@ import { useRouter } from 'next/router'
 
 function TopPage() {
 
-    const { systemTheme, theme, setTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => {
-        setMounted(true);
-    }, [])
+    // const { systemTheme, theme, setTheme } = useTheme();
+    // const [mounted, setMounted] = useState(false);
+    // useEffect(() => {
+    //     setMounted(true);
+    // }, [])
 
     const router = useRouter()
 
-    const renderThemeChanger = () => {
-        if (!mounted) return null;
+    // const renderThemeChanger = () => {
+    //     if (!mounted) return null;
 
-        const currentTheme = theme === "system" ? systemTheme : theme;
+    //     const currentTheme = theme === "system" ? systemTheme : theme;
 
-        if (currentTheme === "dark") {
-            return (
-                <BsSunFill className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('light')} />
-            )
-        }
+    //     if (currentTheme === "dark") {
+    //         return (
+    //             <BsSunFill className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('light')} />
+    //         )
+    //     }
 
-        else {
-            return (
-                <BsFillMoonFill className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('dark')} />
-            )
-        }
-    };
+    //     else {
+    //         return (
+    //             <BsFillMoonFill className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('dark')} />
+    //         )
+    //     }
+    // };
 
     function handleClick() {
         if (document.getElementById("SideMenu").style.width == "40%") {
