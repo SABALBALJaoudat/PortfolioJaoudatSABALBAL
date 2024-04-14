@@ -164,11 +164,11 @@ h4 {
   overflow: hidden;
 }
 
-/* body {
+body {
   --sb-track-color: #d9dbdc;
   --sb-thumb-color: #7a807d;
   --sb-size: 6px;
-} */
+}
 
 body::-webkit-scrollbar {
   width: var(--sb-size);
