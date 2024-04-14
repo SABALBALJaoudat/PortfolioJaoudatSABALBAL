@@ -1,151 +1,115 @@
-import React from 'react';
-import Image from "next/image";
-import photo from "@/image/Photo de profil.png";
-import workIllustration from "@/image/StorySet Work.svg";
-import Cards from "@/components/Cards";
+import React, { useEffect, useRef } from 'react';
+import TopPage from "@/components/TopPage";
 import Link from "next/link";
-import {animateScroll as scroll} from 'react-scroll';
 import IconButton from "@/components/IconButton";
-import {BsChevronDoubleDown, BsDownload, BsLinkedin} from "react-icons/bs";
+import { BsDownload, BsLinkedin } from "react-icons/bs";
 import TitleAnimation from "@/components/TitleAnimation";
-import {TypeAnimation} from "react-type-animation";
-import {IoMdContact} from "react-icons/io";
+import { TypeAnimation } from "react-type-animation";
+import { IoMdContact } from "react-icons/io";
+// import particlesJS from 'particles.js';
+// import Spline from '@splinetool/react-spline';
+import styles from '../styles/Home.module.css'
+import { StarsCore } from '@/components/Sparkles';
+// import Spline from '@splinetool/react-spline';
 
-function Home() {
 
-    const scrollToContact = () => {
-        const contactElement = document.getElementById('contact');
-        if (contactElement) {
-            scroll.scrollTo(contactElement.offsetTop, {
-                duration: 50,
-                delay: 0,
-                smooth: 'easeInOutQuart'
-            });
-        }
-    };
+const SplineComponent = () => {
+    //   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+    //   useEffect(() => {
+    //     if (canvasRef.current) {
+    //         const app = new Application(canvasRef.current);
+    //         app.load('https://prod.spline.design/bLntjqMjBwx8FWlh/scene.splinecode');
+
+    //         // Définir un délai pour rendre le canvas visible
+    //         setTimeout(() => {
+    //             canvasRef.current!.style.visibility = 'visible';
+    //             canvasRef.current!.style.opacity = '1';
+    //         }, 2000);
+    //     }
+    //   }, []);
+
+    //   return <canvas ref={canvasRef} id="canvas3d" className={styles.canvas3d}></canvas>;
+
+    const splineRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (splineRef.current) {
+                splineRef.current.style.visibility = 'visible';
+                splineRef.current.style.opacity = '1';
+                splineRef.current.style.zIndex = '5';
+            }
+        }, 1000);
+    }, []);
 
     return (
+        <div ref={splineRef} className={styles.canvas3d}>
+            {/* <Spline scene='https://prod.spline.design/bLntjqMjBwx8FWlh/scene.splinecode' /> */}
+        </div>
+    );
+};
+
+
+function Home() {
+    return (
         <div>
-            <div className="flex items-center justify-center">
+            <div className="h-screen w-full flex flex-col justify-between bg-neutral-50 overflow-hidden">
+                <TopPage />
+                <div className="flex items-center justify-center">
 
-                <div className="max-w-5xl">
-                    <div className={"p-5"}>
-                        <div className={"flex flex-col"}>
-                            <div className={"flex flex-col items-center justify-center h-screen w-full"}>
-                                <div className={""}>
-                                    <TitleAnimation/>
-                                </div>
-                                <div className={"text-center mt-5"}>
-                                    <h3 className={"text-3xl font-medium"}>
-                                        <span className={"mr-3"}>I am a</span>
-                                        <TypeAnimation
-                                            sequence={[
-                                                "Front-End Developer",
-                                                1500,
-                                                "Ux/Ui Designer",
-                                                2000,
-                                            ]}
-                                            speed={25}
-                                            className="font-mono text-red-500"
-                                            wrapper={'span'}
-                                            repeat={Infinity}
-                                        />
-                                    </h3>
-                                </div>
-                                <div className={"flex mt-14"}>
-                                    <Link target="_blank" href="https://www.linkedin.com/in/jaoudat-sabalbal-214723195/"
-                                          passHref={true} className="contents">
-                                        <IconButton text={"Linkedin"} color={"bg-blue-600"}>
-                                            <BsLinkedin className="h-5 w-5"/>
-                                        </IconButton>
-                                    </Link>
-                                    <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf' target="_blank" rel="noopener noreferrer">
-                                        <IconButton text={"Cv"} color={"bg-gradient-to-tr from-red-700 to-yellow-500"}>
-                                            <BsDownload className="h-5 w-5"/>
-                                        </IconButton>
-                                    </a>
-                                    <a href="#" onClick={scrollToContact}>
-                                            <IconButton text={"Contact"} color={"bg-gradient-to-tr from-red-300 to-sky-400"}>
-                                                <IoMdContact className="h-5 w-5"/>
+                    <div className="max-w-5xl z-10">
+                        <div className={"p-5"}>
+                            <div className={"flex flex-col"}>
+                                <div className={"flex flex-col items-center justify-center h-screen w-full animatedDiv"}>
+                                    <div className={""}>
+                                        <TitleAnimation />
+                                    </div>
+                                    <div className={"text-center mt-5"}>
+                                        <h3 className={"text-3xl font-medium"}>
+                                            <span className={"mr-3"}>Je suis un</span>
+                                            <TypeAnimation
+                                                sequence={[
+                                                    "Développeur Front-End",
+                                                    1500,
+                                                    "Ux/Ui Designer",
+                                                    2000,
+                                                ]}
+                                                speed={25}
+                                                className="font-mono text-red-500"
+                                                wrapper={'span'}
+                                                repeat={Infinity}
+                                            />
+                                        </h3>
+                                    </div>
+                                    <div className={"flex mt-14 z-8"}>
+                                        <Link target="_blank" href="https://www.linkedin.com/in/jaoudat-sabalbal-214723195/"
+                                            passHref={true} className="contents">
+                                            <IconButton text={"Linkedin"} color={"bg-blue-600"}>
+                                                <BsLinkedin className="h-5 w-5" />
                                             </IconButton>
-                                    </a>
+                                        </Link>
+                                        <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf' target="_blank" rel="noopener noreferrer">
+                                            <IconButton text={"Cv"} color={"bg-gradient-to-tr from-red-700 to-yellow-500"}>
+                                                <BsDownload className="h-5 w-5" />
+                                            </IconButton>
+                                        </a>
+                                    </div>
                                 </div>
-                                <BsChevronDoubleDown className="chevronDoubleDown absolute bottom-5 w-8 h-8"/>
-                            </div>
-                            <div className={"flex flex-wrap mt-14"}>
-                                <div className={"md:w-1/2"}>
-                                <p className={"text-justify text-base leading-7"}>
-                                    Hi, my name is Jaoudat, a passionate and motivated UX/UI designer and Front-End developer.
-                                    I am specialized in creating attractive and intuitive designs for websites and
-                                    and mobile applications. I have a solid experience in user interface design and development,
-                                    and I love working in a team to implement designs that deliver an exceptional experience
-                                    for users.
-                                </p>
-                                <p className={"text-justify text-base leading-7 mt-5 flex flex-wrap items-center"}>
-                                    You can have a look to my CV with all my projects :
-                                    <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf'
-                                       target="_blank" rel="noopener noreferrer">
-                                        <button className={"flex flex-row p-2 m-2 items-center rounded-xl text-white bg-gradient-to-tr from-red-700 to-yellow-500"}>
-                                            CV
-                                        </button>
-                                    </a>
-                                </p>
-                                <p className={"text-justify text-base leading-7 mt-5"}>
-                                    Or you can find my complete portfolio here :
-                                    <Link target="_blank" className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}
-                                          href={"https://www.figma.com/proto/lizKbzPM4zMi4izsgn4nKL/Portfolio?page-id=701%3A193&node-id=715-341&viewport=865%2C577%2C0.49&scaling=scale-down&starting-point-node-id=715%3A341"}>
-                                        portfolio Figma
-                                    </Link>
-                                </p>
-                                </div>
-                                <div className={"flex justify-center mx-auto mt-14 md:my-auto"}>
-                                    <Image src={photo}
-                                           className="w-52 h-52 md:w-72 md:h-72" alt=""/>
-                                </div>
+
+                                {/* <SplineComponent /> */}
                             </div>
                         </div>
-
-
-                        <div className="lg:grid lg:grid-cols-3 lg:gap-4 py-5 mt-24">
-                            <h2 id={"project"} className={"row-start-1 col-start-1 text-3xl font-semibold"}>
-                                Project
-                            </h2>
-                            <div className={"hidden lg:block lg:row-start-1 lg:col-start-3 w-full h-auto"}>
-                                <Image src={workIllustration}
-                                       className="" alt="User illustrations by Storyset"/>
-                                <div className={"flex items-center justify-center"}>
-                                    <a href="https://storyset.com/user" className={"text-xs"}>User illustrations by Storyset</a>
-                                </div>
-                            </div>
-                            <div className={"lg:row-start-1 lg:col-start-1 lg:col-end-3 relative mt-20"}>
-                                <Cards/>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col py-5 my-14">
-                            <h2 id={"contact"} className={"text-3xl font-semibold mb-10"}>
-                                Contact
-                            </h2>
-                            <div className={"flex flex-wrap items-center py-2"}>
-                                <p>To see my Linkedin :</p>
-                                <Link target="_blank" href="https://www.linkedin.com/in/jaoudat-sabalbal-214723195/"
-                                      passHref={true} className="contents">
-                                    <IconButton text={"Linkedin"} color={"bg-blue-600"}>
-                                        <BsLinkedin className="h-5 w-5"/>
-                                    </IconButton>
-                                </Link>
-                            </div>
-                            <div className={"flex flex-wrap items-center py-2"}>
-                                <p>To write me a message :</p>
-                                <p className={"mx-2"}>jaoudat.sabalbal@outlook.fr</p>
-                            </div>
-                            <div className={"flex flex-wrap items-center py-2"}>
-                                <p>To hear my voice :</p>
-                                <p className={"mx-2"}>06 18 17 64 83</p>
-                            </div>
-                        </div>
-
                     </div>
+                    <StarsCore
+                        id="tsparticlesfullpage"
+                        background="transparent"
+                        minSize={1.2}
+                        maxSize={2}
+                        particleDensity={100}
+                        className="absolute top-0 w-full h-screen z-1"
+                        particleColor="#000000"
+                    />
                 </div>
             </div>
         </div>

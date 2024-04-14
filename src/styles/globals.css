@@ -2,45 +2,190 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    @apply font-poppins
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+body {
+  @apply font-poppins
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2{
+  @apply text-3xl font-semibold;
+}
+
+h3{
+  @apply text-2xl font-semibold;
+}
+
+h4{
+  @apply text-xl font-semibold;
+}
+
+.card {
+  @apply flex flex-col items-center bg-gray-200 shadow-xl rounded-xl;
+  width: 380px;
+  height: 460px;
+}
+
+.card:hover {
+  @apply transition-colors duration-500 ease-in-out transform bg-gray-300;
+}
+
+.card-notAllowed {
+  cursor: not-allowed;
+}
+
+.card-nonVisible {
+  filter: grayscale(100%);
+  pointer-events: none;
 }
 
 .card-zoom {
-    @apply relative flex items-center justify-center m-3 overflow-hidden
-    bg-gradient-radial from-white via-gray-50 to-gray-300
-    shadow-xl dark:shadow-gray-700 dark:shadow-xl w-48 h-48 rounded-2xl;
+  @apply relative flex items-center justify-center overflow-hidden bg-gradient-radial from-white via-gray-50 to-gray-300 shadow-xl dark:shadow-gray-700 dark:shadow-xl rounded-xl;
+  /* margin-left: -60px;
+    margin-right: 30px; */
+  width: 25vw;
+  height: 300px;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+  max-width: 280px;
 }
+
+/* .card img {
+    max-width: 280px;
+    width: 35vw;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+} */
+
 .card-zoom-image {
-    @apply absolute object-contain w-auto h-4/6 transition-all duration-500 ease-in-out transform bg-center bg-cover rounded-lg;
+  @apply absolute object-contain w-auto h-5/6 transition-all duration-500 ease-in-out transform bg-center bg-cover rounded-lg;
 }
+
 .card-zoom-text {
-    @apply text-xl font-black transition-all duration-500 ease-in-out transform scale-150 opacity-80;
+  @apply text-2xl font-black transition-all duration-500 ease-in-out transform scale-100 opacity-80;
 }
+
+.card-zoom-text-description {
+  @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80 w-5/6 text-justify;
+}
+
 .card:hover .card-zoom-image {
-    @apply scale-150;
+  @apply scale-110;
 }
+
 .card:hover .card-zoom-text {
-    @apply scale-110;
+  @apply scale-100;
 }
 
-@keyframes upDown{
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.4);
-    }
-    100% {
-        transform: scale(1);
-    }
+.card:hover .svg-transition {
+  opacity: 1;
+  transform: translate(10px, -10px);
 }
 
-.chevronDoubleDown{
-    animation: upDown 1.5s infinite
+@keyframes upDown {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.chevronDoubleDown {
+  animation: upDown 1.5s infinite
+}
+
+.slide-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  transform-origin: bottom;
+  z-index: 40;
+}
+
+.slide-in_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  transform-origin: bottom;
+  z-index: 40;
+}
+
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  transform-origin: top;
+  z-index: 40;
+}
+
+.slide-out_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  transform-origin: top;
+  z-index: 40;
+}
+
+.slide-out-element {
+  width: 100%;
+  height: auto;
+  transform-origin: top;
+  z-index: 30;
+  overflow: hidden;
+}
+
+body {
+  --sb-track-color: #d9dbdc;
+  --sb-thumb-color: #7a807d;
+  --sb-size: 6px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 2px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
