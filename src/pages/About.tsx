@@ -192,18 +192,11 @@ function About() {
                         Tu peux jeter un coup d'oeil à mon CV ici :
                         <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf'
                           target="_blank" rel="noopener noreferrer">
-                          <div className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}>
+                          <div className={"ml-2 text-blue-600 hover:underline"}>
                             Cv Sabalbal Jaoudat
                           </div>
                         </a>
                       </span>
-                      {/* <p className={"text-justify text-base leading-7 mt-5"}>
-                        Or you can find my complete portfolio here :
-                        <Link target="_blank" className={"ml-2 text-blue-600 dark:text-blue-500 hover:underline"}
-                          href={"https://www.figma.com/proto/lizKbzPM4zMi4izsgn4nKL/Portfolio?page-id=701%3A193&node-id=715%3A341&viewport=569%2C939%2C0.28&scaling=scale-down&starting-point-node-id=715%3A341"}>
-                          portfolio Figma
-                        </Link>
-                      </p> */}
                     </motion.div>
                   </div>
                   <div className={"flex justify-center mx-auto mt-14 md:my-auto"}>

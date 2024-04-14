@@ -25,7 +25,7 @@ function Karacal() {
                         </h2>
                         Site web Extra:
                         <Link target="_blank" passHref={true}
-                            className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline ml-2"
+                            className="text-sm font-medium text-blue-600 hover:underline ml-2"
                             href="https://www.extralabs.xyz/">
                             https://www.extralabs.xyz/
                         </Link>
@@ -33,7 +33,7 @@ function Karacal() {
                         <br />
                         Site web Karacal:
                         <Link target="_blank" passHref={true}
-                            className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline ml-2"
+                            className="text-sm font-medium text-blue-600 hover:underline ml-2"
                             href="https://karacal.fr/">
                             https://karacal.fr/
                         </Link>

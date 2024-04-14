@@ -26,7 +26,7 @@ function Ogoxe() {
                         Présentation du projet :
                         <br />
                         <Link target="_blank" passHref={true}
-                            className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                            className="text-sm font-medium text-blue-600 hover:underline"
                             href="https://www.channelmanche.com/fr/projets/projets/building-resilience-in-flood-disadvantaged-communities/">
                             https://www.channelmanche.com/fr/projets/projets/building-resilience-in-flood-disadvantaged-communities/
                         </Link>
@@ -35,7 +35,7 @@ function Ogoxe() {
                         Site web :
                         <br />
                         <Link target="_blank" passHref={true}
-                            className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                            className="text-sm font-medium text-blue-600 hover:underline"
                             href="https://platform.bric-network.com/">
                             https://platform.bric-network.com/
                         </Link>

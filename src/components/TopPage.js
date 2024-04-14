@@ -10,31 +10,7 @@ import { useRouter } from 'next/router'
 
 function TopPage() {
 
-    // const { systemTheme, theme, setTheme } = useTheme();
-    // const [mounted, setMounted] = useState(false);
-    // useEffect(() => {
-    //     setMounted(true);
-    // }, [])
-
     const router = useRouter()
-
-    // const renderThemeChanger = () => {
-    //     if (!mounted) return null;
-
-    //     const currentTheme = theme === "system" ? systemTheme : theme;
-
-    //     if (currentTheme === "dark") {
-    //         return (
-    //             <BsSunFill className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('light')} />
-    //         )
-    //     }
-
-    //     else {
-    //         return (
-    //             <BsFillMoonFill className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('dark')} />
-    //         )
-    //     }
-    // };
 
     function handleClick() {
         if (document.getElementById("SideMenu").style.width == "40%") {
@@ -67,41 +43,32 @@ function TopPage() {
 
             <div className="absolute top-5 z-20 pb-1 pt-8 w-full flex items-center justify-center gap-x-2 lg:px-48 md:px-8 px-4 astro-nav">
                 <Link href="/" className="transition inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
-                    text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
-                    hover:dark:ring-zinc-600 before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
+                    text-zinc-500 overflow-hidden hover:text-zinc-900 ring-2 hover:ring-zinc-400 
+                    before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
                     before:duration-200 before:transform before:scale-50 before:translate-y-full before:opacity-0 before:hover:opacity-100 before:hover:scale-110 
-                    before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
-                    bg-zinc-100 dark:bg-zinc-900">
+                    before:hover:translate-y-0 before:hover:bg-black/5 isActive ring-zinc-200
+                    bg-zinc-100">
                     <MdOutlineHome />
                     Acceuil
                 </Link>
                 <Link href="/Works" className="transition inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
-                    text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
-                    hover:dark:ring-zinc-600 before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
+                    text-zinc-500 overflow-hidden hover:text-zinc-900 ring-2 hover:ring-zinc-400 
+                    before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
                     before:duration-200 before:transform before:scale-50 before:translate-y-full before:opacity-0 before:hover:opacity-100 before:hover:scale-110 
-                    before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
-                    bg-zinc-100 dark:bg-zinc-900">
+                    before:hover:translate-y-0 before:hover:bg-black/5 isActive ring-zinc-200 
+                    bg-zinc-100">
                     <MdOutlineWorkOutline />
                     Expérience
                 </Link>
-                <Link href="/About" className="transition duration-1000 ease-in-out inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
-                    text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
-                    hover:dark:ring-zinc-600 before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
+                <Link href="/About" className="transition inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
+                    text-zinc-500 overflow-hidden hover:text-zinc-900 ring-2 hover:ring-zinc-400 
+                    before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
                     before:duration-200 before:transform before:scale-50 before:translate-y-full before:opacity-0 before:hover:opacity-100 before:hover:scale-110 
-                    before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
-                    bg-zinc-100 dark:bg-zinc-900">
+                    before:hover:translate-y-0 before:hover:bg-black/5 isActive ring-zinc-200 
+                    bg-zinc-100">
                     <TbCookieMan />
                     A propos de moi
                 </Link>
-                {/* <Link href="/TestPage" className="transition duration-1000 ease-in-out inline-flex relative justify-center items-center rounded-lg py-2 pl-2 pr-3 gap-2 text-md font-medium 
-                    text-zinc-500 overflow-hidden dark:text-zinc-400 hover:text-zinc-900 hover:dark:text-zinc-100 ring-2 hover:ring-zinc-400 
-                    hover:dark:ring-zinc-600 before:content-[''] before:absolute before:w-full before:aspect-square before:rounded-full before:transition-transform 
-                    before:duration-200 before:transform before:scale-50 before:translate-y-full before:opacity-0 before:hover:opacity-100 before:hover:scale-110 
-                    before:hover:translate-y-0 before:hover:bg-black/5 before:hover:dark:bg-white/5 isActive ring-zinc-200 dark:ring-zinc-800 
-                    bg-zinc-100 dark:bg-zinc-900">
-                    <MdOutlinePhonelink />
-                    Test
-                </Link> */}
             </div>
 
             {/* <div id="SideMenu" className="fixed h-full w-0 top-0 right-0 z-20 bg-gray-200 dark:bg-zinc-600 rounded-l-xl" style={{ transition: "width 400ms" }}>

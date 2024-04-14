@@ -23,7 +23,7 @@ function Hmkl() {
                             HMKL
                         </h2>
                         <Link target="_blank" passHref={true}
-                            className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                            className="text-sm font-medium text-blue-600 hover:underline"
                             href="https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php">
                             https://www.irit.fr/HandiMathKey-Learning/Test/HMKL/Vue/pageConnexion.php
                         </Link>
