@@ -134,7 +134,7 @@ function About() {
       //Popout
       info.style.transform = "translateZ(75px)";
       card_background.style.transform = "translateZ(25px)";
-      card_photo.style.transform = "translateZ(50px)";
+      card_photo.style.transform = "translateZ(70px)";
     });
     //Animate Out
     container.addEventListener("mouseleave", (e) => {
@@ -209,19 +209,19 @@ function About() {
                         <div className={`${styles.card_movement} card_movement`}>
                           <div className={`${styles.card_background} card_background`}>
                             <div className={""}>
-                              <Image className="h-48 w-48" src={card_background} alt='' />
+                              <Image className="h-48 w-48 rounded-md" src={card_background} alt='' />
                             </div>
                           </div>
                           <div className={`${styles.card_photo} card_photo`}>
-                            <div className={""}>
-                              <Image className="w-32" src={card_photo} alt='' />
+                            <div className="">
+                              <Image className="w-32 rounded-md" src={card_photo} alt='' />
                             </div>
                           </div>
                           <div className={`${styles.info} info pt-5`}>
-                            <h1>
+                            <h1 className='text-xl'>
                               SABALBAL Jaoudat
                             </h1>
-                            <h1>
+                            <h1 className='text-sm'>
                               Ingénieur Front-End
                             </h1>
                           </div>
