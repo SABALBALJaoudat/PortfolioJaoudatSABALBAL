@@ -11,12 +11,12 @@ import styles from '../styles/cards.module.css'
 import { FiArrowUpRight } from "react-icons/fi";
 
 const images = [
-    [cards_Noveltis, "Noveltis", "/Noveltis", "Expérience en tant qu'Ingénieur Web Front-End", "non_visible"],
-    [cards_Ogoxe, "Ogoxe", "/Ogoxe", "Stage de fin d'études en tant qu'Ingénieur Intéractions Homme-Machine", "visible"],
-    [cards_Karacal, "Karacal", "/Karacal", "Projet de fin d'étude alliant Ux/Ui Design et développement web Front-End", "visible"],
-    [cards_Irit, "HMKL", "/Hmkl", "Stage de Master 1 en tant que développeur web", "visible"],
-    [cards_MasterIhm, "Projet Master", "/Hmkl", "Vous trouverez ici un apercu des différents projets au cours de mon master", "non_visible"],
-    [cards_PersonalProject, "Projet perso", "/Hmkl", "Voici les projets perso sur lesquels j'ai plus ou moins récemment travaillé", "non_visible"],
+    [cards_Noveltis, "Noveltis", "/Noveltis", "Ingénieur Web Front-End", "non_visible", "Mai 2023 - ... (> 1 an)"],
+    [cards_Ogoxe, "Ogoxe", "/Ogoxe", "Stage de fin d'études en tant qu'Ingénieur Intéractions Homme-Machine", "visible", "Mars 2022 - Juillet 2022 (5 mois)"],
+    [cards_Karacal, "Karacal", "/Karacal", "Projet de fin d'étude alliant Ux/Ui Design et développement web Front-End", "visible", "Septembre 2021 - Mars 2022 (7 mois)"],
+    [cards_Irit, "HMKL", "/Hmkl", "Stage Master 1 en tant que développeur web", "visible", "Juin 2021 - Aout 2021 (3 mois)"],
+    [cards_MasterIhm, "Projet Master", "/Hmkl", "Vous trouverez ici un apercu des différents projets au cours de mon master", "non_visible", "Septembre 2021 - Aout 2022 (1 an)"],
+    [cards_PersonalProject, "Projet perso", "/Hmkl", "Voici les projets perso sur lesquels j'ai plus ou moins récemment travaillé", "non_visible", "Beaucoup de temps..."],
 ]
 
 function Cards() {
@@ -51,7 +51,8 @@ function Cards() {
                                     data-mdb-ripple-color="light" alt="" />
                             </div>
                             <h1 className="card-zoom-text self-start mt-4">{image[1]}</h1>
-                            <h1 className="card-zoom-text-description self-start mt-2">{image[3]}</h1>
+                            <p className="card-zoom-text-description self-start mt-2">{image[3]}</p>
+                            <p className="card-zoom-text-description-date self-start mt-2">{image[5]}</p>
                             <div className="absolute bottom-0 right-4 w-12 h-12">
                                 <FiArrowUpRight className="h-6 w-6 svg-transition bottom-0 left-0 opacity-0 transition-all duration-500 ease-in-out transform" />
                             </div>

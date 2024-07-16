@@ -30,7 +30,7 @@ h4 {
 }
 
 .card {
-  @apply flex flex-col items-center bg-gray-200 shadow-xl rounded-xl;
+  @apply grid grid-cols-1 place-items-start bg-gray-200 shadow-xl rounded-xl gap-y-1;
   width: 380px;
   height: 460px;
 }
@@ -49,14 +49,14 @@ h4 {
 }
 
 .card-zoom {
-  @apply relative flex items-center justify-center overflow-hidden bg-gradient-radial from-white via-gray-50 to-gray-300 shadow-xl rounded-xl;
+  @apply relative flex items-center justify-center overflow-hidden bg-gradient-radial from-white via-gray-50 to-gray-300 shadow-xl rounded-xl m-auto;
   /* margin-left: -60px;
     margin-right: 30px; */
   width: 25vw;
-  height: 300px;
+  height: 260px;
   border-radius: inherit;
   box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
-  max-width: 280px;
+  max-width: 240px;
 }
 
 /* .card img {
@@ -75,11 +75,15 @@ h4 {
 }
 
 .card-zoom-text {
-  @apply text-2xl font-black transition-all duration-500 ease-in-out transform scale-100 opacity-80;
+  @apply text-2xl font-black transition-all duration-500 ease-in-out transform scale-100 opacity-80 mx-auto my-2;
 }
 
 .card-zoom-text-description {
   @apply text-base font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80 w-5/6 text-justify;
+}
+
+.card-zoom-text-description-date {
+  @apply text-xs font-normal transition-all duration-500 ease-in-out transform scale-100 opacity-80 w-5/6 text-justify;
 }
 
 .card:hover .card-zoom-image {

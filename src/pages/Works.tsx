@@ -17,13 +17,6 @@ export default function Works() {
                         <h2 id={"project"}>
                             Mes projets
                         </h2>
-                        {/* <div className={"hidden lg:block lg:row-start-1 lg:col-start-3 w-full h-auto"}>
-                    <Image src={workIllustration}
-                        className="" alt="User illustrations by Storyset" />
-                    <div className={"flex items-center justify-center"}>
-                        <a href="https://storyset.com/user" className={"text-xs"}>User illustrations by Storyset</a>
-                    </div>
-                </div> */}
                         <div className={"flex justify-center relative mt-20"}>
                             <Cards />
                         </div>
