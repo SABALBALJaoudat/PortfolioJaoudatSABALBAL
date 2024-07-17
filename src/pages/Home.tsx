@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import TopPage from "@/components/TopPage";
 import Link from "next/link";
 import IconButton from "@/components/IconButton";
-import { BsDownload, BsLinkedin } from "react-icons/bs";
+import { BsDownload, BsGithub, BsLinkedin } from "react-icons/bs";
 import TitleAnimation from "@/components/TitleAnimation";
 import { TypeAnimation } from "react-type-animation";
 import { IoMdContact } from "react-icons/io";
@@ -87,6 +87,12 @@ function Home() {
                                             passHref={true} className="contents">
                                             <IconButton text={"Linkedin"} color={"bg-blue-600"}>
                                                 <BsLinkedin className="h-5 w-5" />
+                                            </IconButton>
+                                        </Link>
+                                        <Link target="_blank" href="https://github.com/SABALBALJaoudat"
+                                            passHref={true} className="contents">
+                                            <IconButton text={"GitHub"} color={"bg-gray-500"}>
+                                                <BsGithub className="h-5 w-5" />
                                             </IconButton>
                                         </Link>
                                         <a href='/documents/Cv%20Jaoudat%20SABALBAL%20Designer%20Ux%20Ui%20Dev%20Front.pdf' target="_blank" rel="noopener noreferrer">
